@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Material Interface</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <h1>Study Material</h1>
+        </div>
+    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Python HOME</a></li>
+                    <li><a href="Features.html">Python Features</a></li>
+                    <li><a href="Buildingblocks.html">Python Building Blocks</a></li>
+                    <li><a href="setup.html">Python Environment Setup</a></li>
+                    <li><a href="program.html">Simple Python Program</a></li>
+                    <li><a href="datatypes.html">Python Data Types</a></li>
+                    <li><a href="operators.html">Operators</a></li>
+                    <li><a href="controlflow.html">Control Flow</a></li>
+                    <li><a href="conditionalstatement.html">Conditional Statements</a></li>
+                    <li><a href="loop.html">Loops</a></li>
+                    <li><a href="loopmanipulation.html">Loop Manipulation</a></li>
+                    <li><a href="list.html">Lists</a></li>
+                    <li><a href="tuple.html">Tuples</a></li>
+                    <li><a href="set.html" class="active">Sets</a></li>
+                    <li><a href="dictionary.html">Dictionary</a></li>
+                    <li><a href="function.html">Function</a></li>
+                    <li><a href="userdefinedfuncion.html">User Defined Function</a></li>
+                    <li><a href="modules.html">Modules</a></li>
+                    <li><a href="package.html">Python Packages</a></li>
+                    <li><a href="class.html">Classes and Objects</a></li>
+                    <li><a href="method.html">Method Overriding and Overloading</a></li>
+                    <li><a href="hiding.html">Data Hiding</a></li>
+                    <li><a href="abstraction.html">Data Abstraction</a></li>
+                    <li><a href="inheritance.html">Inheritance</a></li>
+                    <li><a href="customization.html">Customization vs Inheritance</a></li>
+                    <li><a href="io.html">  I/O Handling</a></li>
+                    <li><a href="file.html">File Handling</a></li>
+                    <li><a href="exception.html">Exception Handling</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <h1>3.3 Python Sets</h1><br>
+<p>Sets data structure in Python programming is implemented to support mathematical set operations . Sets are based on specific rules they define .</p>          <br>  <div class="section">
+<h2>1. Creating a Set</h2>
+            <p>Sets store multiple unique items in a single variable, using curly braces or the set() constructor.</p>
+            <br>
+            <p><b>Example:</b></p>
+            <pre>
+Emp = { "Tanvi" , 9 , 'T' }
+a = set('abc')
+print(Emp, a)
+            </pre></div>
+            <div class="section">
+            <h2>2. Accessing a Set</h2>
+<p>We cannot access the values in the set using index as the set is unorder and has no index .</p>                <br>
+<p><b>Example:</b></p>        <pre>
+a = {1, 2, 3, 4}
+print(a)
+            </pre></div>
+            <div class="section">
+            <h2>3. Deleting Values in a Set</h2>
+            <p>For removing the item from the set either remove() method or discard() method is used .    
+            </p>
+            <br><h3>i) Using remove()</h3>
+            <br>
+            <p><b>Example:</b></p><pre>
+a = {1, 2, 3, 4}
+a.remove(2)
+print(a)
+            </pre>
+            <br>  <h3>ii) Using discard()</h3>
+            <br>
+            <p><b>Example:</b></p><pre>
+a = {1, 2, 3, 4}
+a.discard(3)
+print(a)
+            </pre></div>
+            <div class="section">
+            <h2>4. Updating a Set</h2>
+            <br> <h3>i) Using update()</h3>
+            <p>Once the set is created we cannot change the values in set but we can add the element to the set we can update the set by using the add() method or update() method .
+            </p>
+            <br>
+            <p><b>Example:</b></p><pre>
+a = {1, 2, 3, 4}
+a.update([5, 7])
+print(a)
+            </pre>
+            <br><h3>ii) Using add()</h3>
+            <br>
+            <p><b>Example:</b></p> <pre>
+b = {1, 2, 3, 4}
+b.add(8)
+print(b)
+            </pre></div><div class="section">
+            <h2>Basic Set Operations</h2>
+            <br>  <h3>i) Union</h3>
+            <p>Union operation perform on two sets return all the elements from both the sets .</p>
+            <br>
+            <p><b>Example:</b></p> <pre>
+x = {'a', 'b', 'c'}
+y = {'d', 'e'}
+z = x.union(y)
+print(z)
+            </pre>
+            <br>  <h3>ii) Intersection</h3>
+            <p>Intersection operation perform on two sets Returns all the elements which are common or in both the sets .
+            </p>
+            <br>
+            <p><b>Example:</b></p> <pre>
+x = {'a', 'b', 'c'}
+y = {'a', 'c', 'd', 'e'}
+z = x & y
+print(z)
+            </pre>
+            <br>   <h3>iii) Difference</h3>
+            <p>Difference operation on two sets set 1 and set to Returns all the elements which are present on Set 1 but not in Set 2 .  it is performed by using  - operator .
+  
+            </p>
+            <br>
+            <p><b>Example:</b></p><pre>
+x = {'a', 'b', 'c'}
+y = {'a', 'c', 'd', 'e'}
+z = x - y
+print(z)
+            </pre>
+            <br> <h3>iv) Symmetric Difference</h3>
+            <p>The symmetric represent set of all elements which belong to either to A or B but not both . Difference operation is performed by using ^ operator 
+            </p>
+            <br>
+            <p><b>Example:</b></p> <pre>
+x = {'a', 'b', 'c'}
+y = {'a', 'c', 'd', 'e'}
+z = x ^ y
+print(z)
+            </pre></div>
+            <div class="section">
+            <h2>Built-in Set Functions</h2>
+            <br> <h3>i) all()</h3>
+            <p>This functions return true if all yments of the set are true this function also returns a true if the value in the set is empty</p>
+            <br>
+            <p><b>Example:</b></p>  <pre>
+print(all({1, 2, 3}))  # True
+print(all({0, 1, 2}))  # False
+            </pre>
+            <br> <h3>ii) any()</h3>
+            <p>This function return true if any element of the set is true</p>
+            <br>
+            <p><b>Example:</b></p> <pre>
+print(any({0, 0, 1}))  # True
+            </pre>
+            <br><h3>iii) len()</h3>
+            <p>len() function returns the length of the set </p>
+            <br>
+            <p><b>Example:</b></p><pre>
+x = {1, 2, 3, 4}
+print(len(x))
+            </pre>
+            <br> <h3>iv) max() and min()</h3>
+            <p>This function returns the maximum value and minimum value from the set .</p>
+            <br>
+            <p><b>Example:</b></p> <pre>
+x = {5, 10, 15}
+print(max(x))
+print(min(x))
+            </pre>
+            <br>  <h3>v) sorted()</h3>
+            <p>This function returns a new sorted list from the elements .</p>
+            <br>
+            <p><b>Example:</b></p> <pre>
+x = {3, 1, 4, 2}
+print(sorted(x))
+            </pre>
+          <br>  <h3>vi) sum()</h3>
+            <p>This function returns the sum of all elements in the set .</p>
+            <br>
+            <p><b>Example:</b></p> <pre>
+x = {1, 2, 3, 4}
+print(sum(x))
+            </pre></div>
+            <div class="navigation">
+                <a href="tuple.html" class="prev">Previous</a> 
+                <a href="dictionary.html" class="next">Next</a> 
+            </div>
+        </main>
+    </div>
+</body>
+</html>

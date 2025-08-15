@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Environment Setup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <h1>Study Material</h1>
+        </div>
+    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Python HOME</a></li>
+                    <li><a href="Features.html">Python Features</a></li>
+                    <li><a href="Buildingblocks.html">Python Building Blocks</a></li>
+                    <li><a href="setup.html" >Python Environment Setup</a></li>
+                    <li><a href="program.html">Simple Python Program</a></li>
+                    <li><a href="datatypes.html" class="active">Python Data Types</a></li>
+                    <li><a href="operators.html">Operators</a></li>
+                    <li><a href="controlflow.html">Control Flow</a></li>
+                    <li><a href="conditionalstatement.html">Conditional Statements</a></li>
+                    <li><a href="loop.html">Loops</a></li>
+                    <li><a href="loopmanipulation.html">Loop Manipulation</a></li>
+                    <li><a href="list.html">List</a></li>
+                    <li><a href="tuple.html">Tuples</a></li>
+                    <li><a href="set.html">Sets</a></li>
+                    <li><a href="dictionary.html">Dictionary</a></li>
+                    <li><a href="function.html">Function</a></li>
+                    <li><a href="userdefinedfuncion.html">User Defined Function</a></li>
+                    <li><a href="modules.html">Modules</a></li>
+                    <li><a href="package.html">Python Packages</a></li>
+                    <li><a href="class.html">Classes and Objects</a></li>
+                    <li><a href="method.html">Method Overriding and Overloading</a></li>
+                    <li><a href="hiding.html">Data Hiding</a></li>
+                    <li><a href="abstraction.html">Data Abstraction</a></li>
+                    <li><a href="inheritance.html">Inheritance</a></li>
+                    <li><a href="customization.html">Customization vs Inheritance</a></li>
+                    <li><a href="io.html">  I/O Handling</a></li>
+                    <li><a href="file.html">File Handling</a></li>
+                    <li><a href="exception.html">Exception Handling</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <!DOCTYPE html>
+        <main class="main-content">
+            <h1>1.5 Data Types in Python</h1>
+          <br>
+            <p>The type of data value that can be stored in an identifier/variable is known as its data type. In programming, data types are an important concept. A variable can store data of different types, and different types can do different things. Data types are used to define the type of variable.</p>
+      <br>
+            <h2>Common Data Types in Python</h2>
+     
+            <p>Python has several built-in data types that you can use to store different kinds of data. Here are five of the most commonly used ones:</p>
+      <br><div class="section">  
+            <ul>
+              <h2>1. Numeric:-</h2>
+                <p>Python's numeric data types are used to hold numeric values. Here are some common numeric types:</p><br>
+                  <ul>
+                    <li><strong>int:</strong></li>
+                      <p>Represents signed integers of non-limited length. Integers are whole numbers, positive or negative, without decimals.</p>
+                    <li><strong>float:</strong></li>
+                      <p>Represents floating-point numbers, which are numbers with a decimal point. It's accurate up to 15 decimal places by default.</p>
+                    <li><strong>complex:</strong></li>
+                      <p>Represents complex numbers, which are numbers of the form a + bi, where a and b are real numbers, and i is the imaginary unit (the square root of -1).</p>
+                  </ul>
+                  <br>
+                <p><b>Example:</b></p>
+                <pre>
+                # Creates a variable with integer value
+                a = 5
+                print("Type of a:", type(a))   <class 'int'>
+      
+                # Creates a variable with float value
+                b = 5.0
+                print("Type of b:", type(b)) <class 'float'>
+      
+                # Creates a variable with complex value
+                c = 2 + 4j
+                print("Type of c:", type(c)) <class 'complex'>               </pre></div>
+                <div class="section">  
+                  <h2>2. String:-</h2>
+                <p>A string is a collection of characters enclosed in single quotes ('), double quotes ("), or triple quotes (""" or '''). It can contain any number, letter, or symbol.</p>
+                <br>
+                <p><strong>Example:</strong></p>
+                <pre>
+           
+                str = "Hello I'm Tanvi!"
+                print("String is:", str)  # Output: String is: Hello I'm Tanvi !              
+                </pre></div>
+                <div class="section">  
+                  <h2>3. List:-</h2>
+                <p>A list is an ordered, mutable collection of elements similar to arrays in other languages. It can hold different data types within the same list. Elements are enclosed in square brackets ([]) and separated by commas (,).</p>
+                <br><p><strong>Example:</strong></p>
+                <pre>
+
+                # List of only integers
+                a = [10, 30, 20, 50]
+                print(a)  # Output: [10, 30, 20, 50]
+      
+                # List of only strings
+                b = ['tue', 'fri', 'mon']
+                print(b)  # Output: ['tue', 'fri', 'mon']         
+                </pre></div>
+                <div class="section">  
+                  <h2>4. Tuple:-</h2>
+                <p>A tuple is an ordered, immutable collection of elements. It is similar to a list, but it is enclosed in parentheses () instead of square brackets. Tuples are generally faster than lists.</p>
+                <br><p><strong>Example:</strong></p>
+                <pre>
+                
+                # Tuple of only integers
+                a = (10, 30, 20, 50)
+                print(a)  # Output: (10, 30, 20, 50)
+      
+                # Tuple of only strings
+                b = ('tue', 'fri', 'mon')
+                print(b)  # Output: ('tue', 'fri', 'mon')
+      
+                # Tuple of both integers and strings
+                c = ('tue', 1, 'fri', 4, 7, 'mon')
+                print(c)  # Output: ('tue', 1, 'fri', 4, 7, 'mon')                
+                </pre></div>
+                <div class="section">  
+                  <h2>5. Dictionary:-</h2>
+                <p>A dictionary is an unordered collection of data in the form of key-value pairs. It is enclosed in curly braces ({}) and each pair is separated by a colon (:). Dictionaries are mutable, meaning you can change their values after they are created.</p>
+                <br><p><strong>Example:</strong></p>
+                <pre>
+                a = {1: 'Red', 2: 'Blue', 3: 'Green'}
+      
+                # Prints the keys and values
+                print(a)  # Output: {1: 'Red', 2: 'Blue', 3: 'Green'}
+      
+                # Prints the keys of the dictionary
+                print(a.keys())  # Output: dict_keys([1, 2, 3])
+      
+                # Prints the values of the dictionary
+                print(a.values())  # Output: dict_values(['Red', 'Blue', 'Green'])
+                </pre></div>
+            </ul>
+            <div class="section">  
+            <h2>Input through Keyboard</h2>
+      
+            <p>In Python, you can input data from the user using the `input()` function.</p>
+      <br>
+            <p><strong>Syntax:</strong></p>
+      
+            <pre>
+            variable_name = input([prompt])
+            </pre>
+      
+            <p>where `prompt` is an optional string that will be displayed to the user before they enter their input.</p>
+      <br>
+            <p><strong>Example:</strong></p>
+      
+            <pre>
+            a = input("Enter a number: ")
+            print(a)  # Output: The number entered by the user
+            </pre></div>  
+            <div class="navigation">
+                <a href="program.html" class="prev">Previous</a> 
+                <a href="operators.html" class="next">Next</a> 
+            </div>
+          </main>
+</body>
+</html>

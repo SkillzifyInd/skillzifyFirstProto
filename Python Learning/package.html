@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Material Interface</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <h1>Study Material</h1>
+        </div>
+    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Python HOME</a></li>
+                    <li><a href="Features.html">Python Features</a></li>
+                    <li><a href="Buildingblocks.html">Python Building Blocks</a></li>
+                    <li><a href="setup.html">Python Environment Setup</a></li>
+                    <li><a href="program.html">Simple Python Program</a></li>
+                    <li><a href="datatypes.html">Python Data Types</a></li>
+                    <li><a href="operators.html">Operators</a></li>
+                    <li><a href="controlflow.html">Control Flow</a></li>
+                    <li><a href="conditionalstatement.html">Conditional Statements</a></li>
+                    <li><a href="loop.html">Loops</a></li>
+                    <li><a href="loopmanipulation.html">Loop Manipulation</a></li>
+                    <li><a href="list.html">List</a></li>
+                    <li><a href="tuple.html">Tuples</a></li>
+                    <li><a href="set.html">Sets</a></li>
+                    <li><a href="dictionary.html">Dictionary</a></li>
+                    <li><a href="function.html">Function</a></li>
+                    <li><a href="userdefinedfuncion.html">User Defined Function</a></li>
+                    <li><a href="modules.html">Modules</a></li>
+                    <li><a href="package.html" class="active">Python Packages</a></li>
+                    <li><a href="class.html">Classes and Objects</a></li>
+                    <li><a href="method.html">Method Overriding and Overloading</a></li>
+                    <li><a href="hiding.html">Data Hiding</a></li>
+                    <li><a href="abstraction.html">Data Abstraction</a></li>
+                    <li><a href="inheritance.html">Inheritance</a></li>
+                    <li><a href="customization.html">Customization vs Inheritance</a></li>
+                    <li><a href="io.html">  I/O Handling</a></li>
+                    <li><a href="file.html">File Handling</a></li>
+                    <li><a href="exception.html">Exception Handling</a></li>
+                </ul>
+            </nav>
+        </aside>
+        
+            
+        <main class="main-content">
+            <h1>4.4 Python Packages</h1>
+            <p>A package is a hierarchical file directory structure that defines a single Python application environment that consists of modules, subpackages, and deeper nested sub-subpackages. Along with these, a package contains a file named <code>__init__.py</code>.</p>
+            <br>
+          <br>
+
+            <h2>Key Components of a Python Package</h2>
+            <ul>
+                <li><b>Module:</b> A single Python file containing reusable code (e.g., <code>math.py</code>).</li>
+                <li><b>Package:</b> A directory containing modules and a special <code>__init__.py</code> file.</li>
+                <li><b>Sub-Packages:</b> Packages nested within other packages for deeper organization.</li>
+            </ul><br>
+            <div class="section">
+
+            <h2>4.4.1 Writing Python Package</h2>
+            <p>Packages allow for a hierarchical structuring of the module namespace using dot notation.</p>
+            
+            <h3>Syntax 1: Importing Entire Package</h3>
+            <br><p><b>Example:</b></p><pre>
+import pkg.mod1, pkg.mod2
+pkg.mod1.m1()  # Output: first module
+            </pre>
+            <br>
+            <h3>Syntax 2: Importing Specific Function</h3>
+            <br><p><b>Example:</b></p><pre>
+from pkg.mod1 import m1
+m1()  # Output: first module
+            </pre>
+            <br>
+            <h3>Syntax 3: Importing with Alias</h3>
+            <br><p><b>Example:</b></p> <pre>
+from pkg.mod1 import m1 as module
+module()  # Output: first module
+            </pre>
+            </div>
+            <div class="section">
+
+            <h2>4.4.2 Using Standard Package</h2>
+            <br>
+            <h3>1. What is NumPy?</h3>
+            <p>NumPy is the core library for scientific computing in Python. It provides a high-performance multidimensional array object and tools for working with these arrays.</p>
+            <p><b>Advantages:</b></p>
+            <ul>
+                <li>Array-oriented computing.</li>
+                <li>Efficiently implemented multi-dimensional arrays.</li>
+                <li>Designed for scientific computation.</li>
+            </ul>
+            <br><p><b>Example:</b></p> <pre>
+import numpy as np
+arr = [0,2,4,6,8,10]
+even_arr = np.array(arr)
+print(even_arr)  # Output: [0 2 4 6 8 10]
+            </pre>
+            <br>
+            <h3>2. What is SciPy?</h3>
+            <p>SciPy is an open-source Python library used for mathematics, scientific computing, and engineering. It is built on NumPy and contains many useful functions.</p>
+            <br><p><b>Example:</b></p> <pre>
+from scipy.special import cbrt
+cb = cbrt([27,125])
+print(cb)  # Output: [3. 5.]
+            </pre>
+            <br>
+            <h3>3. What is Matplotlib?</h3>
+            <p>Matplotlib is a plotting library that provides functions for various types of graphs and visualizations.</p>
+            <br><p><b>Example:</b></p> <pre>
+import numpy as np
+import matplotlib.pylab as plt
+
+arr = [5,10,15,20,25]
+a = np.array(arr)
+
+plt.plot(a)
+plt.show()
+            </pre>
+            <br>
+            <h3>4. What is Pandas?</h3>
+            <p>Pandas is a Python package designed for efficient data manipulation and analysis. It provides data structures such as Series and DataFrame.</p>
+            <br><p><b>Example:</b></p> <pre>
+import pandas as pd
+import numpy as np
+
+a = np.array(['A', 'B', 'C', 'D'])
+s = pd.Series(a)
+print(s)
+            </pre></div>
+            
+            <div class="navigation">
+                <a href="modules.html" class="prev">Previous</a> 
+                <a href="class.html" class="next">Next</a> 
+            </div>
+        </main>
+    </div>
+</body>
+</html>

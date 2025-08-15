@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Material Interface</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <h1>Study Material</h1>
+        </div>
+    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Python HOME</a></li>
+                    <li><a href="Features.html">Python Features</a></li>
+                    <li><a href="Buildingblocks.html">Python Building Blocks</a></li>
+                    <li><a href="setup.html">Python Environment Setup</a></li>
+                    <li><a href="program.html">Simple Python Program</a></li>
+                    <li><a href="datatypes.html">Python Data Types</a></li>
+                    <li><a href="operators.html">Operators</a></li>
+                    <li><a href="controlflow.html">Control Flow</a></li>
+                    <li><a href="conditionalstatement.html">Conditional Statements</a></li>
+                    <li><a href="loop.html">Loops</a></li>
+                    <li><a href="loopmanipulation.html">Loop Manipulation</a></li>
+                    <li><a href="list.html" class="active">Lists</a></li>
+                    <li><a href="tuple.html">Tuples</a></li>
+                    <li><a href="set.html">Sets</a></li>
+                    <li><a href="dictionary.html">Dictionary</a></li>
+                    <li><a href="function.html">Function</a></li>
+                    <li><a href="userdefinedfuncion.html">User Defined Function</a></li>
+                    <li><a href="modules.html">Modules</a></li>
+                    <li><a href="package.html">Python Packages</a></li>
+                    <li><a href="class.html">Classes and Objects</a></li>
+                    <li><a href="method.html">Method Overriding and Overloading</a></li>
+                    <li><a href="hiding.html">Data Hiding</a></li>
+                    <li><a href="abstraction.html">Data Abstraction</a></li>
+                    <li><a href="inheritance.html">Inheritance</a></li>
+                    <li><a href="customization.html">Customization vs Inheritance</a></li>
+                    <li><a href="io.html">  I/O Handling</a></li>
+                    <li><a href="file.html">File Handling</a></li>
+                    <li><a href="exception.html">Exception Handling</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <h1>3.1 Python Lists</h1><br>
+            <p>Lists are used to store multiple items in a single variable. List is a sequence of values written in a square bracket and  separated by commas.
+<br>            </p><br>
+            <div class="section">
+            <h2>1. Creating a List</h2>
+            <p>We can create a list by placing a comma seperated sequence of values in square brackets [ ] .
+            </p> <br>
+            <p><b>Example:</b></p>
+            <pre>
+a = ['AAA', 'BBB', 'CCC']
+b = [10, 20, 30, 40]
+print(a, b)
+            </pre></div>
+            <div class="section">
+            <h2>2. Accessing Values in a List</h2>
+            <p>Accessing elements from a list in Python programming is a method to get values that are stored in a list at particular location or index.  Individual element of the list can be accessed using index of the list. 
+
+            </p>
+            <br>
+            <p><b>Example:</b></p>
+            <pre>
+rollNo = [1, 2, 3, 4, 5]
+name = ['Shilpa', 'Chinmaya', 'Akash', 'Aditya']
+print(rollNo[0], name[0])  
+print(rollNo[1], name[1])
+            </pre></div>
+            <div class="section">
+            <h2>3. Deleting Values in a List</h2>
+            <p>The deletion of any element from the list is carried out using various functions like pop, remove, del .</p><br>
+            <h3>i) Using pop()</h3>
+            <p>Pop function is used to remove particular item/element from the list by using its index .</p>
+            <br>
+            <p><b>Example:</b></p><pre>
+a = ['u', 'v', 'w', 'y']
+print("Original list :", a)
+val = a.pop(0)
+print("New list :", a)
+            </pre><br>
+            <h3>ii) Using remove()</h3>
+            <p>If we know the value of the element to be deleted then the remove function is used.
+            </p>
+            <br>
+            <p><b>Example:</b></p><pre>
+a = ['u', 'v', 'w', 'y']
+print("Original list :", a)
+a.remove('v')
+print("New list :", a)
+            </pre><br>
+            <h3>iii) Using del</h3>
+            <p>We can delete one or more items from a list using the keyword ‘del’ . The del keyword can also delete the list completely.
+            </p>
+            <br>
+            <p><b>Example:</b></p> <pre>
+a = ['u', 'v', 'w', 'y']
+print("Original list :", a)
+del a[1]
+print("New list :", a)
+            </pre></div>
+            <div class="section">
+            <h2>4. Updating a List</h2>
+            <p>Lists are mutable. That means it is possible to change the values of list. We can update items of the list by simply assigning the value at the particular index position .</p>
+            <br>
+            <p><b>Example:</b></p><pre>
+a = ["apple", "banana", "cherry"]
+a[1] = "blackcurrant"
+print(a)
+            </pre></div>
+            <div class="section">
+            <h2>Basic List Operations</h2>
+            <h3>i) Traversing a List</h3>
+            <p>Transverse in a list means accessing all the elements or items of the list . The loop is used in list for traversing purpose. The for loop is used to traverse the list elements.</p>
+            <br>
+            <p><b>Example:</b></p><pre>
+a = ["apple", "banana", "cherry"]
+for x in a:
+    print(x)
+            </pre><br>
+            <h3>ii) Finding Length</h3>
+            <p>The Ien() function is used to find the number of elements present in the list. It is used to return the number of items in a list .
+            </p>
+            <br>
+            <p><b>Example:</b></p><pre>
+a = ["apple", "banana", "cherry"]
+x = len(a)
+print(x)
+            </pre><br>
+            <h3>iii) Membership</h3>
+            <p>Using the in operator we can check whether particular element belongs to the list or not.
+            </p>
+            <br>
+            <p><b>Example:</b></p><pre>
+x = ["apple", "banana"]
+print("banana" in x)
+            </pre><br>
+            <h3>iv) List Slices</h3>
+            <p>The : Operator used within the square bracket that it is a list slice and not the index of the list.
+            </p>
+            <pre>
+a = [10, 20, 30, 40, 50]
+a[2:4] = [111, 222, 333]
+print(a)
+            </pre></div>
+            <div class="section">
+            <h2>List Methods</h2>
+            <h3>1. append()</h3>
+            <p>The append() method adds an element to the end of a list. We can insert a single item in the list data time with the append().
+            </p>
+            <br>
+            <p><b>Example:</b></p><pre>
+a = ["apple", "banana", "cherry"]
+a.append("orange")
+print(a)
+            </pre><br>
+            <h3>2. insert()</h3>
+            <p>To insert a list item at a specified index, use the insert() method.
+            </p>
+            <br>
+            <p><b>Example:</b></p><pre>
+a = ["apple", "banana", "cherry"]
+a.insert(1, "orange")
+print(a)
+            </pre><br>
+            <h3>3. extend()</h3>
+            <p> The extend() method extends a list by appending items . The
+                extend function takes the list as an argument and appends this
+                list at the end of old list. 
+               
+               </p>
+               <br>
+               <p><b>Example:</b></p> <pre>
+a = ["apple", "banana", "cherry"]
+b = ["mango", "pineapple", "papaya"]
+a.extend(b)
+print(a)
+            </pre><br>
+            <h3>4. sort()</h3>
+            <p>The sort method arranges the elements in increasing order.
+            </p>
+            <br>
+            <p><b>Example:</b></p><pre>
+a = ["orange", "mango", "kiwi", "pineapple", "banana"]
+a.sort()
+print(a)
+            </pre></div>
+            <div class="section">
+            <h2>7. Built-in List Functions</h2>
+            <p>Functions like <code>len()</code>, <code>max()</code>, <code>min()</code>, <code>sum()</code>, <code>sorted()</code> are used with lists.</p>
+            <br><h3>i) Convert String to List</h3>
+            <p>
+                String is a sequence of characters and list is sequence of values.
+                But list of characters is not the string. We can convert the string to list of characters.
+                </p>
+                <br>
+                <p><b>Example:</b></p><pre>
+str = "hello"
+myList = list(str)
+print(myList)
+            </pre><br>
+            <h3>ii) Split function</h3>
+            <p>If the string contains multiple words then we need to use the built in function split to split the words into the list.
+
+            </p>
+            <br>
+            <p><b>Example:</b></p><pre>
+msg = "I love Python Programming very much"
+myList = msg.split()
+print(myList)
+            </pre><br>
+            <h3>iii) Join function</h3>
+            <p>The join function is exactly reverse to the split function. That means   the  join function takes the list of strings and concatenate to from a string.
+            </p>
+            <br>
+            <p><b>Example:</b></p><pre>
+msg = ['I', 'love', 'Python', 'programming']
+ch = '#'
+result = ch.join(msg)
+print(result)
+            </pre></div>
+            <div class="navigation">
+                <a href="loopmanipulation.html" class="prev">Previous</a> 
+                <a href="tuple.html" class="next">Next</a> 
+            </div>
+        </main>
+    </div>
+</body>
+</html>

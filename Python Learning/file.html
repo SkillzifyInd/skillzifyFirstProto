@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Operators</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <h1>Study Material</h1>
+        </div>
+    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Python HOME</a></li>
+                    <li><a href="Features.html">Python Features</a></li>
+                    <li><a href="Buildingblocks.html">Python Building Blocks</a></li>
+                    <li><a href="setup.html">Python Environment Setup</a></li>
+                    <li><a href="program.html">Simple Python Program</a></li>
+                    <li><a href="datatypes.html">Python Data Types</a></li>
+                    <li><a href="operators.html">Operators</a></li>
+                    <li><a href="controlflow.html">Control Flow</a></li>
+                    <li><a href="conditionalstatement.html">Conditional Statements</a></li>
+                    <li><a href="loop.html">Loops</a></li>
+                    <li><a href="loopmanipulation.html">Loop Manipulation</a></li>
+                    <li><a href="list.html">List</a></li>
+                    <li><a href="tuple.html">Tuples</a></li>
+                    <li><a href="set.html">Sets</a></li>
+                    <li><a href="dictionary.html">Dictionary</a></li>
+                    <li><a href="function.html">Function</a></li>
+                    <li><a href="userdefinedfuncion.html">User Defined Function</a></li>
+                    <li><a href="modules.html">Modules</a></li>
+                    <li><a href="package.html">Python Packages</a></li>
+                    <li><a href="class.html">Classes and Objects</a></li>
+                    <li><a href="method.html">Method Overriding and Overloading</a></li>
+                    <li><a href="hiding.html">Data Hiding</a></li>
+                    <li><a href="abstraction.html">Data Abstraction</a></li>
+                    <li><a href="inheritance.html">Inheritance</a></li>
+                    <li><a href="customization.html">Customization vs Inheritance</a></li>
+                    <li><a href="io.html">  I/O Handling</a></li>
+                    <li><a href="file.html" class="active">File Handling</a></li>
+                    <li><a href="exception.html">Exception Handling</a></li>
+
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <h1>6.2 File Handling</h1><br>
+            <p>File is a named location on the disk to store information. Files store information permanently on secondary memory, making them a persistent data structure.</p>
+            <br>             <div class="section">
+
+            <h2>6.2.1 Opening a File in Different Modes</h2>
+            <p>All files in Python Programming are required to be open before some operation can be performed on the file. 
+                In Python Programming while opening a file, file object is created and by using the file object we can perform different set of operations on the opened file.
+                </p>
+         <br>  <br>
+         <p><b>Syntax:</b></p>
+<pre>
+file_object = open(file_name, mode)
+</pre><br>
+<p><b>Example:</b></p><pre>
+file1 = open("d:\\myfile1.txt", 'w')
+file2 = open("myfile2.txt", 'rt')</pre>
+
+            
+<br></div>             <div class="section">
+
+            <h2>6.2.2 Accessing File Contents</h2>
+            <p>For reading the file, we must open the file in r mode and we must specify the correct name of the file which has to be read. 
+                The read() method is used for reading the file.
+                </p>
+                <br>
+                <p><b>Example:</b></p><pre>
+file1 = open("d:\\myfile1.txt", 'w')
+file2 = open("myfile2.txt", 'rt')</pre>
+<br>
+            <h3>The readline() method :</h3>
+            <p>The readline() method allows us to read a single line from the file. When file reaches to the end, it returns an empty String</p>
+            <br>
+            <p><b>Example:</b></p>
+            <pre>
+                
+file=open("d:\\myfile.txt",'rt')
+print(file2.readline())</pre><br>
+            <h3>The readlines() method:</h3>
+            <p>The readlines() method is used to print all the lines in the program.
+            </p>
+            <br>
+            <p><b>Example:</b></p>
+            <pre>
+file=open("d:\\myfile.txt",'rt')
+print(file2.readlines())
+                </pre></div>             <div class="section">
+
+            <h2>6.2.3 Writing to a File</h2>
+            <p>For writing the contents to the file we must open it in writing mode. hence we use ‘w’ or ‘a’ or ‘x’ as a file mode. the write() method is used to write the contents to the file.
+            </p><br>
+            <p><b>Example:</b></p>
+            <pre>
+file = open("d:\\myfile.txt", 'wt')
+file.write("Hello Everyone")
+file.close()
+            </pre><br>
+            <h3>The writelines() method:</h3>
+            <p>The writelines() method is used to write list of strings to the file.            </p>
+            <br>
+            <p><b>Example:</b></p>
+            <pre>
+file=open("d:\\myfile.txt",'wt')
+line=["This is the Line that we want to write in file"]
+file.writelines(line)
+            </pre><br>
+            <h3>Appending the File :</h3>
+            <p>Appending the file means inserting records at the end of the file.
+                For Appending the file we must open the file in ‘a’ or’ab’ mode.
+                           </p>
+            <br>
+            <p><b>Example:</b></p>
+            <pre>
+file=open("d:\\myfile.txt",'a')
+file.write("Lets write in file")
+            </pre></div>
+            <div class="section">
+
+            <h2>6.2.4 Closing a File</h2>
+            <p>After performing all the file operations, it is necessary to close the file. Closing the file is necessary because it frees all the resources that are associated with the file.
+            </p><br>
+           
+            <p><b>Syntax:</b></p>
+            <pre>
+file_object.close()</pre>
+<br>
+              <p><b>Example:</b></p>
+<pre>file = open("d:\\myfile.txt", 'rt')
+    file.close()</pre>
+
+           <br>
+            </div>
+            <div class="section">
+
+            <h2>6.2.5 Renaming a File</h2>
+            <p>For renaming a file in Python, the rename() method is used.       For that purpose it is required to import the module os.</p><br>
+            <br>    <p><b>Syntax:</b></p>
+           <pre>os.rename( src , dst )
+</pre>
+<br>
+<p><b>Example:</b></p>
+            <pre>
+import os
+os.rename(r'D:\file1.txt',r'D:\file2.txt',)
+print("File Renamed Successfully")
+            </pre>
+            </div>
+            <div class="section">
+
+            <h2>6.2.6 Deleting a File</h2>
+            <p>For Removing a file in Python, the remove() method is used belonging to the os module.            </p><br>
+           
+              <p><b>Syntax:</b></p>
+            <pre>os.remove(filename)</pre><br>
+            <br>
+            <p><b>Example:</b></p>
+            <pre>
+import os
+os.remove('D:\\file1.txt')
+print("File Removed Successfully")
+            </pre>
+            </div>
+            <div class="section">
+
+            <h2>6.2.7 Directories in Pyth<br></h2>
+            <h3>Seek and Tell Method</h3>
+            <h3>i)The Seek Method:</h3>
+            <p>The seek method is used to change the file position. Similarly, the tell method returns the current position. 
+                The method seek() sets the file's current position at the offset. </p>
+         
+                <br>
+                <p><b>Syntax:</b></p>
+                <pre>fileObject.seek(offset[, whence])</pre>
+                <br><h3>ii)The Tell Method:</h3>
+                <p>The method tell() returns the current position of the file read/write pointer within the file. </p>
+             
+                <br>
+                <p><b>Syntax:</b></p>
+                    <pre>fileObject.tell()</pre>
+                    <br>
+              <p><b>Example:</b></p>
+            <pre>
+file = open('d:\\test.txt', 'rt')
+print(file.read())
+print(file.tell())
+file.seek(0)
+print(file.tell())
+            </pre>
+            
+            <h3>Directory Methods</h3><br>
+            <h4>1.Getting Current Working Directory</h4>
+            <p>For getting the name of current working directory, we use the function name getcwd() method. This method returns the name of current working directory. </p>
+            <br>
+            <p><b>Example:</b></p>
+            <pre>
+import os
+print(os.getcwd())
+            </pre>
+            <br>
+            <h4>2.Listing Files in a Directory</h4>
+            <p>For listing the contents of a directory, the listdir() method is used.</p>
+            <br>
+              <p><b>Example:</b></p> <pre>
+import os
+print(os.listdir())
+            </pre>
+            <br>
+            <h4>3.Creating and Removing Directories</h4>
+            <p>A new directory can be created using the mkdir() method.</p>
+            <p>A file can be deleted using the remove() method. The rmdir() method removes an empty directory. 
+            </p>
+            <br>
+              <p><b>Example:</b></p>
+            <pre>
+import os
+os.mkdir("mypythonPrograms")
+os.rmdir("mypythonPrograms")
+            </pre>
+            </div>
+            <div class="navigation">
+                <a href="io.html" class="prev">Previous</a> 
+                <a href="exception.html" class="next">Next</a> 
+            </div>
+        </main>
+    
+    </div>
+</body>
+</html>

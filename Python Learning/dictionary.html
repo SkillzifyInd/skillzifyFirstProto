@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Material Interface</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <h1>Study Material</h1>
+        </div>
+    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Python HOME</a></li>
+                    <li><a href="Features.html">Python Features</a></li>
+                    <li><a href="Buildingblocks.html">Python Building Blocks</a></li>
+                    <li><a href="setup.html">Python Environment Setup</a></li>
+                    <li><a href="program.html">Simple Python Program</a></li>
+                    <li><a href="datatypes.html">Python Data Types</a></li>
+                    <li><a href="operators.html">Operators</a></li>
+                    <li><a href="controlflow.html">Control Flow</a></li>
+                    <li><a href="conditionalstatement.html">Conditional Statements</a></li>
+                    <li><a href="loop.html">Loops</a></li>
+                    <li><a href="loopmanipulation.html">Loop Manipulation</a></li>
+                    <li><a href="list.html">List</a></li>
+                    <li><a href="tuple.html">Tuples</a></li>
+                    <li><a href="set.html">Sets</a></li>
+                    <li><a href="dictionary.html" class="active">Dictionary</a></li>
+                    <li><a href="function.html">Function</a></li>
+                    <li><a href="userdefinedfuncion.html">User Defined Function</a></li>
+                    <li><a href="modules.html">Modules</a></li>
+                    <li><a href="package.html">Python Packages</a></li>
+                    <li><a href="class.html">Classes and Objects</a></li>
+                    <li><a href="method.html">Method Overriding and Overloading</a></li>
+                    <li><a href="hiding.html">Data Hiding</a></li>
+                    <li><a href="abstraction.html">Data Abstraction</a></li>
+                    <li><a href="inheritance.html">Inheritance</a></li>
+                    <li><a href="customization.html">Customization vs Inheritance</a></li>
+                    <li><a href="io.html">  I/O Handling</a></li>
+                    <li><a href="file.html">File Handling</a></li>
+                    <li><a href="exception.html">Exception Handling</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <h1>3.4 Python Dictionaries</h1>
+            <p>In Python , dictionary is an unordered collection of elements. This items are in the form of key - value pair . The dictionary contains the collection of indices called keys and collection of values. Each key is associated with single value this association of keys with the values is called as key - value pair .
+            </p><br>
+            <div class="section">
+            <h2>1. Creating a Dictionary</h2>
+<p>Items of the dictionary are written within the {} brackets that are separated by commas . the key - value pair is represented by using : operator .
+</p>         <br>
+<p><b>Example:</b></p>   <pre>
+a = {
+  "name": "Tanvi",
+  "age": 17
+}
+print(a)
+            </pre></div>
+            <div class="section">
+            <h2>2. Accessing Values in a Dictionary</h2>
+            <p>Access dictionary values using keys.</p>
+            <br>
+            <p><b>Example:</b></p> <pre>
+a = {
+    "name": "Tanvi",
+    "age": 17
+    }
+print(a["name"])                  
+            </pre></div>
+            <div class="section">
+            <h2>3. Deleting Values in a Dictionary</h2>
+            <p>We can delete the elements in the dictionary by using the 
+                keyword del.
+                </p>
+                <br>
+                <p><b>Example:</b></p>    <pre>
+a = {
+    "name": "Tanvi",
+    "age": 17
+    }
+print(a["name"])
+del a["name"]
+print(a)                  
+            </pre></div>
+            <div class="section">
+            <h2>4. Updating Values in a Dictionary</h2>
+            <p>We can update the values in the dictionary by directly assigning    them to the corresponding Key position.
+            </p>
+            <br>
+            <p><b>Example:</b></p>   <pre>
+a = {
+    "name": "Tanvi",
+    "age": 17
+    }
+print(a["name"])
+a["name"] = "abc"
+print(a)                 
+            </pre></div>
+            <div class="section">
+            <h2>Basic Dictionary Operations</h2>
+            <br>
+            <h3>i) Adding Items</h3>
+            <p> We can add the items in the dictionary .</p>
+            <br>
+            <p><b>Example:</b></p> <pre>
+a = {
+    1: "name",
+    2: "age"
+    }
+a[3] = "rollno"
+print(a)                 
+            </pre><br>
+            <h3>ii) Finding Dictionary Length</h3>
+            <p>The len() function is used to find the number of pairs in the dictionary.
+            </p>
+            <br>
+            <p><b>Example:</b></p> <pre>
+a = {
+    1: "name",
+    2: "age"
+    }
+print(len(a))                 
+            </pre><br>
+            <h3>iii) Iterating Through a Dictionary</h3>
+            <p>For iterating through the dictionary  , for loop is used. The corresponding keys and values present in the dictionary can be displayed by using the for loop .
+            </p>
+            <br>
+            <p><b>Example:</b></p>   <pre>
+a = {
+    1: "name",
+    2: "age"
+     }
+for i in a:
+    print(i, a[i])
+            </pre></div>
+            <div class="navigation">
+                <a href="set.html" class="prev">Previous</a> 
+                <a href="index.html" class="next">Next</a> 
+            </div>
+        </main>
+    </div>
+</body>
+</html>

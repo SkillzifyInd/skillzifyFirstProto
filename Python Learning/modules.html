@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Modules</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <h1>Python Modules</h1>
+        </div>
+    </header>
+    <div class="container">
+        <div class="container">
+            <aside class="sidebar">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Python HOME</a></li>
+                        <li><a href="Features.html">Python Features</a></li>
+                        <li><a href="Buildingblocks.html">Python Building Blocks</a></li>
+                        <li><a href="setup.html">Python Environment Setup</a></li>
+                        <li><a href="program.html">Simple Python Program</a></li>
+                        <li><a href="datatypes.html">Python Data Types</a></li>
+                        <li><a href="operators.html">Operators</a></li>
+                        <li><a href="controlflow.html">Control Flow</a></li>
+                        <li><a href="conditionalstatement.html">Conditional Statements</a></li>
+                        <li><a href="loop.html">Loops</a></li>
+                        <li><a href="loopmanipulation.html">Loop Manipulation</a></li>
+                        <li><a href="list.html">List</a></li>
+                        <li><a href="tuple.html">Tuples</a></li>
+                        <li><a href="set.html">Sets</a></li>
+                        <li><a href="dictionary.html">Dictionary</a></li>
+                        <li><a href="function.html">Function</a></li>
+                        <li><a href="userdefinedfuncion.html">User Defined Function</a></li>
+                        <li><a href="modules.html" class="active">Modules</a></li>
+                        <li><a href="package.html">Python Packages</a></li>
+                        <li><a href="class.html">Classes and Objects</a></li>
+                        <li><a href="method.html">Method Overriding and Overloading</a></li>
+                        <li><a href="hiding.html">Data Hiding</a></li>
+                        <li><a href="abstraction.html">Data Abstraction</a></li>
+                        <li><a href="inheritance.html">Inheritance</a></li>
+                        <li><a href="customization.html">Customization vs Inheritance</a></li>
+                        <li><a href="io.html">  I/O Handling</a></li>
+                        <li><a href="file.html">File Handling</a></li>
+                        <li><a href="exception.html">Exception Handling</a></li>
+                    </ul>
+                </nav>
+            </aside>
+        <main class="main-content">
+            <h1>4.3 Modules</h1>
+            <p>Modules are Python (.py) files that contain code such as functions, classes, and variables. These modules can be imported into scripts for reuse.</p>
+            <br>
+            <div class="section">
+            <h3>4.3.1 Writing Modules</h3>
+<p>Writing a module means simply creating a file which contains python definitions and statements. 
+</p>  <p>The file name is the module name with the extension .py . To include module in a file, use import statement. 
+</p>  <br><p><b>Example:</b></p>    <pre>
+# mymodule.py
+def greeting(name):
+    print("Hello, " + name)
+            </pre>
+            </div>
+            <div class="section">
+
+            <h3>4.3.2 Importing Objects from Modules</h3>
+<p>Import statement is used to import a specific module by using its name</p><p>After using import statement we can refer the things defined in that module.
+</p>  <br><p><b>Example:</b></p>          <pre>
+from mymodule import greeting
+greeting("Tanvi")
+            </pre>
+            </div>            <div class="section">
+
+            <h3>4.3.3 Name of the Module</h3>
+            <p>Module has a name. one can use the name of the module using _name_ attribute of the module of the module
+            </p>
+            <br><p><b>Example:</b></p>  <pre>
+print("Name of Module is", __name__)
+            </pre>
+            </div>            <div class="section">
+
+            <h3>4.3.4 Python Built-in Modules</h3><br>
+            <h4>Math Module</h4>
+            <p>The Math module used in Python for various mathematical functionalities such as finding log computing sign and cosine values calculating square root and so on .</p>
+            <br><p><b>Example:</b></p>
+            <pre>
+import math
+print(math.sqrt(25))
+print(math.factorial(5))
+print(math.pow(2, 3))
+print(math.pi)
+            </pre>
+            
+<br>
+            <h4>Functional Programming Modules</h4>
+            <p>The functional programming module provides functions and classes that support functional programming style.</p>
+            <br><p><b>Example:</b></p>   <pre>
+import itertools
+num = [1,2,3,4,5]
+print(list(itertools.combinations(num, 3)))
+            </pre>
+            </div>
+            <div class="section">
+
+            <h3>4.3.5 Namespace and Scoping</h3>
+            <p>Namespaces ensure that variable names do not conflict. Each module has its own namespace.</p>
+            <br><p><b>Example:</b></p> <pre>
+# FirstModule.py
+def display(a, b):
+    return a + b
+
+# SecondModule.py
+def display(a, b):
+    return a * b
+            </pre>
+            <pre>
+import FirstModule
+import SecondModule
+print(FirstModule.display(10, 20))
+print(SecondModule.display(5, 4))
+            </pre></div>
+            <div class="section">
+
+            <h3>4.3.6 Global, Local, and Built-in Namespace</h3><br>
+            <ul>
+                <li><strong>Global Namespace:</strong> Contains module-level variables and functions.</li>
+                <li><strong>Local Namespace:</strong> Exists within functions.</li>
+                <li><strong>Built-in Namespace:</strong> Includes built-in functions like <code>print()</code>, <code>len()</code>.</li>
+            </ul></div>
+            <div class="navigation">
+                <a href="userdefinedfuncion.html" class="prev">Previous</a>
+                <a href="package.html" class="next">Next</a>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

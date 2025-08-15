@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Operators</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <h1>Study Material</h1>
+        </div>
+    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Python HOME</a></li>
+                    <li><a href="Features.html">Python Features</a></li>
+                    <li><a href="Buildingblocks.html">Python Building Blocks</a></li>
+                    <li><a href="setup.html">Python Environment Setup</a></li>
+                    <li><a href="program.html">Simple Python Program</a></li>
+                    <li><a href="datatypes.html">Python Data Types</a></li>
+                    <li><a href="operators.html">Operators</a></li>
+                    <li><a href="controlflow.html">Control Flow</a></li>
+                    <li><a href="conditionalstatement.html">Conditional Statements</a></li>
+                    <li><a href="loop.html">Loops</a></li>
+                    <li><a href="loopmanipulation.html">Loop Manipulation</a></li>
+                    <li><a href="list.html">List</a></li>
+                    <li><a href="tuple.html">Tuples</a></li>
+                    <li><a href="set.html">Sets</a></li>
+                    <li><a href="dictionary.html">Dictionary</a></li>
+                    <li><a href="function.html">Function</a></li>
+                    <li><a href="userdefinedfuncion.html">User Defined Function</a></li>
+                    <li><a href="modules.html">Modules</a></li>
+                    <li><a href="package.html">Python Packages</a></li>
+                    <li><a href="class.html">Classes and Objects</a></li>
+                    <li><a href="method.html">Method Overriding and Overloading</a></li>
+                    <li><a href="hiding.html">Data Hiding</a></li>
+                    <li><a href="abstraction.html">Data Abstraction</a></li>
+                    <li><a href="inheritance.html" class="active">Inheritance</a></li>
+                    <li><a href="customization.html">Customization vs Inheritance</a></li>
+                    <li><a href="io.html">  I/O Handling</a></li>
+                    <li><a href="file.html">File Handling</a></li>
+                    <li><a href="exception.html">Exception Handling</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <h1>5.5 Inheritance and Composition Classes</h1>
+            <br>
+            <div class="section">
+                <h2>Inheritance</h2>
+                <p>Inheritance is a relationship similar to a family tree where the properties of one class are inherited by another class. It provides core reusability.</p>
+            <br>
+                <h3>Types of Inheritance</h3>
+                <ul>
+                    <li>Single Inheritance</li>
+                    <li>Multiple Inheritance</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2>Single Inheritance</h2>
+                <p>In single inheritance, there is one base class and one derived class.</p><br>
+                <br>
+            <p><b>Syntax:</b></p><pre>
+
+CLASS A :
+#PROPERTIES OF CLASS A
+                    
+CLASS B (A):
+#CLASS B INHERITING THE PROPERTIES OF CLASS 
+                    </pre>
+                
+                    <br>
+                    <p><b>Example:</b></p><pre>
+class Person:
+    def display(self):
+        print("I am Tanvi")
+
+class Student(Person):
+    def show(self):
+        print("I am in Final Year")
+
+s = Student()
+s.show()
+s.display()
+                </pre>
+            </div>
+            
+            <div class="section">
+                <h2>Multiple Inheritance</h2>
+                <p>In multiple inheritance, more than one child class can be derived from a single base class.</p><br>
+                <br>
+            <p><b>Syntax:</b></p><pre>
+
+Class Base1:
+     Body of the class
+Class Base2:
+    # Body of the class
+Class Derived(Base1, Base2):
+    # Body of the class
+             
+                                        </pre><br>
+                                        <p><b>Example:</b></p>
+                <pre>
+class Class1:
+    def m(self):
+        print("First Year")
+
+class Class2(Class1):
+    def m(self):
+        print("Second Year")
+ 
+class Class3(Class1):
+    def m(self):
+        print("Third Year")  
+       
+class Class4(Class2, Class3):
+    pass  
+     
+obj = Class4()
+obj.m()
+                </pre>
+            </div>
+            
+            <div class="section">
+                <h2>Composition</h2>
+                <p>Composition is a relationship where one object is defined as a part of another object, rather than using inheritance.</p>
+                <br>
+            <p><b>Syntax:</b></p>
+                <pre>
+class A :
+
+    # variables of class A
+    # methods of class A
+              
+    ...
+                
+    class B : 
+              
+    # by using "obj" we can access member's of class A.
+    obj = A()
+    # variables of class B
+    # methods of class B
+              
+    ...
+        
+              </pre>
+              <br>
+              <p><b>Example:</b></p><pre>
+class Component:
+    def __init__(self):
+        print('Component class object created...')
+    
+    def m1(self):
+        print('Component class m1() method executed...')
+
+class Composite:
+    def __init__(self):
+        self.obj1 = Component()
+        print('Composite class object also created...')
+    
+    def m2(self):
+        print('Composite class m2() method executed...')
+        self.obj1.m1()
+
+obj2 = Composite()
+obj2.m2()
+                </pre>
+            </div>
+            
+            <div class="navigation">
+                <a href="abstraction.html" class="prev">Previous</a> 
+                <a href="customization.html" class="next">Next</a> 
+            </div>
+        </main>
+    </div>
+</body>
+</html>

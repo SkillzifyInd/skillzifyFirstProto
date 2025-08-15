@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Building Blocks</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        .dark-mode {
+            background-color: var(--bg-dark);
+            color: var(--text-dark);
+        }
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: linear-gradient(2deg, #abc2ff, #0205a7);
+            color: white;
+            padding: 7px;
+            width: -webkit-fill-available;
+            box-sizing: border-box;
+            position: fixed;
+            margin-top: -50px;
+        }
+        .dark-mode .header-container {
+            background: linear-gradient(2deg, #000000, #0205a7);
+        }
+        .logo img {
+            height: 40px;
+            padding-left: 4px;
+        }
+        
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+        .nav {
+            display: flex;
+            gap: 15px;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            transition: all 0.3s ease-in-out;
+            position: relative;
+        }
+        .nav a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+        }
+        .side {
+            position: fixed;
+            right: -300px;
+            width: 195px;
+            background: linear-gradient(135deg, #0205a7, #3054a7);
+            padding-top: 38px;
+            transition: 0.5s cubic-bezier(0, 0, 0.76, -0.13);
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 30px;
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+            z-index: 5;
+        }
+        .side.active {
+            right: 0;
+        }
+        .side a {
+            display: block;
+            color: white;
+            padding: 17px;
+            text-decoration: none;
+            text-align: left;
+            font-size: 18px;
+            transition: all 0.3s ease-in-out;
+        }
+        .side a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding-left: 25px;
+        }
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            left: 20px;
+            font-size: 24px;
+            cursor: pointer;
+            color: white;
+        }
+        .theme-toggle {
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 18px;
+        }
+    </style>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+      
+        gtag('config', 'G-EMJ8DSPWYE');
+      </script>
+      <title>Skillzify - Learn Python</title>
+      
+      <script type="module">
+          import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js";
+          import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-auth.js";
+  
+          const firebaseConfig = {
+              apiKey: "AIzaSyA3FcUoQZ811vygR9oDITUwwiCDALYJ5zE",
+              authDomain: "skillzify2024.firebaseapp.com",
+              projectId: "skillzify2024",
+              storageBucket: "skillzify2024.firebasestorage.app",
+              messagingSenderId: "502836069827",
+              appId: "1:502836069827:web:db3ff7fd2fd161c4d6a976",
+              measurementId: "G-EMJ8DSPWYE"
+          };
+          
+          const app = initializeApp(firebaseConfig);
+          const auth = getAuth(app);
+  
+          onAuthStateChanged(auth, (user) => {
+              if (user) {
+                  document.getElementById("login-link").style.display = "none";
+                  document.getElementById("register-link").style.display = "none";
+                  document.getElementById("logout-btn").style.display = "inline-block";
+              } else {
+                  document.getElementById("login-link").style.display = "inline-block";
+                  document.getElementById("register-link").style.display = "inline-block";
+                  document.getElementById("logout-btn").style.display = "none";
+              }
+          });
+  
+          onAuthStateChanged(auth, (user) => {
+              if (user) {
+                  document.getElementById("login-link2").style.display = "none";
+                  document.getElementById("register-link2").style.display = "none";
+                  document.getElementById("logout-btn2").style.display = "inline-block";
+              } else {
+                  document.getElementById("login-link2").style.display = "inline-block";
+                  document.getElementById("register-link2").style.display = "inline-block";
+                  document.getElementById("logout-btn2").style.display = "none";
+              }
+          });
+  
+          window.logout = () => {
+              signOut(auth).then(() => {
+                  window.location.reload();
+              }).catch((error) => {
+                  console.error("Logout failed", error);
+              });
+          };
+      </script>
+</head>
+<body>
+    <div class="header-container" style="margin-top: 0px;">
+        <button class="menu-toggle" onclick="toggleSidebar()"><i class='bx bx-menu'></i></button>
+        
+        <div class="logo">
+            <a href="index.html"><img id="logo-img" src="../Dark No BG.png" alt="Skillzify Logo"></a>
+        </div>
+        <div class="nav">
+            <a href="../index.html"><b>Home</b></a>
+            <a href="../study_mate.html"><b>Study Materials</b></a>
+            
+            <a href="../compiler.html"><b>Python Compiler</b></a>
+            <a href="../contact.html"><b>Contact</b></a>
+            <a href="../aboutus.html"><b>About Us</b></a>
+            <a href="../login.html" id="login-link"><b>Login</b></a>
+            <a href="../register.html" id="register-link"><b>Register</b></a>
+            <button id="logout-btn" style="display:none;" onclick="logout()"><b>Logout</b></button>
+            <button class="theme-toggle" onclick="toggleTheme()"><i class='bx bx-moon'></i></button>
+        </div>
+    </div>
+    <div class="side" id="side-menu">
+        <span class="close-btn" onclick="toggleSidebar()">&times;</span>
+        <a href="../index.html"><b>Home</b></a>
+            <a href="../study_mate.html"><b>Study Materials</b></a>
+            <a href="../compiler.html"><b>Python Compiler</b></a>
+            <a href="../contact.html"><b>Contact</b></a>
+            <a href="../aboutus.html"><b>About Us</b></a>
+            <a href="../login.html" id="login-link"><b>Login</b></a>
+            <a href="../register.html" id="register-link"><b>Register</b></a>
+            <button id="logout-btn" style="display:none;" onclick="logout()"><b>Logout</b></button>
+            <button class="theme-toggle" onclick="toggleTheme()"><i class='bx bx-moon'></i></button>
+        </div>
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Python HOME</a></li>
+                    <li><a href="Features.html">Python Features</a></li>
+                    <li><a href="Buildingblocks.html" class="active">Python Building Blocks</a></li>
+                    <li><a href="setup.html">Python Environment Setup</a></li>
+                    <li><a href="program.html">Simple Python Program</a></li>
+                    <li><a href="datatypes.html">Python Data Types</a></li>
+                    <li><a href="operators.html">Operators</a></li>
+                    <li><a href="controlflow.html">Control Flow</a></li>
+                    <li><a href="conditionalstatement.html">Conditional Statements</a></li>
+                    <li><a href="loop.html">Loops</a></li>
+                    <li><a href="loopmanipulation.html">Loop Manipulation</a></li>
+                    <li><a href="list.html">List</a></li>
+                    <li><a href="tuple.html">Tuples</a></li>
+                    <li><a href="set.html">Sets</a></li>
+                    <li><a href="dictionary.html">Dictionary</a></li>
+                    <li><a href="function.html">Function</a></li>
+                    <li><a href="userdefinedfuncion.html">User Defined Function</a></li>
+                    <li><a href="modules.html">Modules</a></li>
+                    <li><a href="package.html">Python Packages</a></li>
+                    <li><a href="class.html">Classes and Objects</a></li>
+                    <li><a href="method.html">Method Overriding and Overloading</a></li>
+                    <li><a href="hiding.html">Data Hiding</a></li>
+                    <li><a href="abstraction.html">Data Abstraction</a></li>
+                    <li><a href="inheritance.html">Inheritance</a></li>
+                    <li><a href="customization.html">Customization vs Inheritance</a></li>
+                    <li><a href="io.html">  I/O Handling</a></li>
+                    <li><a href="file.html">File Handling</a></li>
+                    <li><a href="exception.html">Exception Handling</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <h1>1.2 Python Building Blocks</h1><br>
+            
+            <div class="section">
+                <h2>1. Identifiers</h2>
+                <p>An identifier is a name given to variables, functions, classes, etc. It must follow these rules:</p>
+                <ul>
+                    <li>Must start with a letter (a-z, A-Z) or underscore (_).</li>
+                    <li>Can contain letters, digits (0-9), and underscores.</li>
+                    <li>Cannot use Python keywords.</li>
+                    <li>Special characters (!, @, #, $, etc.) are not allowed.</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2>2. Keywords</h2>
+                <p>KThe keywords are special words reserved for some  purpose.  For instance a variable name can not be from because it is a keyword.
+                   <br> <br><b>Examples:</b> </p>
+                <pre>
+False, None, True, and, as, assert, break, class, continue,
+def, del, elif, else, except, finally, for, from, global, if, import
+                </pre>
+            </div>
+            
+            <div class="section">
+                <h2>3. Variables</h2>
+                <p>A variable is nothing but a reserved memory location to store values. Variable is an entity to which the programmer can assign some values. Programmer choose the variable name which is meaningful.</p>
+                <p>Rules of Variables:</p>
+                <ul>
+                    <li>Follow identifier rules.</li>
+                    <li>Use assignment operator (=) to assign values.</li>
+                    <li>Case-sensitive (e.g., myVar ≠ MyVar).</li>
+                </ul>
+                <p><br><b>Examples:</b></p>
+                <pre>
+x = 10  # Integer variable
+y = "Hello"  # String variable
+                </pre>
+            </div>
+            
+            <div class="section">
+                <h2>4. Indentation</h2>
+                <p>Leading white space at the beginning of the logical line is called indentation. Python programs get structured through indentation, i.e. code blocks are defined by their indentation. <br><br><b>Examples:</b></p>
+                <pre>
+if True:
+    print("Indented code block")
+                </pre>
+            </div>
+            
+            <div class="section">
+                <h2>5. Comments</h2>
+                <p>Comments are the kind of statements that are written in the program for program understanding purpose. By the comment statements it is possible to understand what exactly the program is doing. Comments are generally used to explain the code.</p>               <ul><br>
+                    <li>Single-line: <pre># print is a statement 
+print( ‘Hello Python? )  
+                        </pre></li>
+                    <br><li>Multi-line:
+                        <pre>
+’’’ this is multiple line comment 
+This is the program of python ’’’
+print(“hello world")
+                        </pre>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="navigation">
+                <a href="Features.html" class="prev">Previous</a>
+                <a href="setup.html" class="next">Next</a>
+            </div>
+        </main>
+    </div>
+    <a href="https://whatsapp.com/channel/0029Vb0aOSuG8l5DXJAK0S3X" class="whatsapp-float" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+    
+    <div class="footer">
+        <p>&copy; 2025 Skillzify. All Rights Reserved.</p>
+    </div>
+    <script>
+        function toggleTheme() {
+            let darkMode = localStorage.getItem("dark-mode");
+            document.body.classList.toggle('dark-mode', darkMode !== "enabled");
+            localStorage.setItem("dark-mode", darkMode === "enabled" ? "disabled" : "enabled");
+            document.getElementById("logo-img").src = darkMode === "enabled" ? "../Dark No BG.png" : "../Light No BG.png";
+            document.getElementById("logo-img2").src = darkMode === "enabled" ? "../Dark No BG.png" : "../Light No BG.png";
+        }
+
+        function toggleSidebar() {
+            document.getElementById("sidebar-menu").classList.toggle("active");
+        }
+
+        window.onload = () => {
+            if (localStorage.getItem("dark-mode") === "enabled") {
+                document.body.classList.add("dark-mode");
+                document.getElementById("logo-img").src = "../Light No BG.png";
+                document.getElementById("logo-img2").src = "../Light No BG.png";
+
+            }
+        };
+    
+        (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="-0FMOHrX1VX3RWxWj6X94";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+    </script>
+</body>
+</html>

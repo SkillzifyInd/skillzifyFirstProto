@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Material Interface</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        .dark-mode {
+            background-color: var(--bg-dark);
+            color: var(--text-dark);
+        }
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: linear-gradient(2deg, #abc2ff, #0205a7);
+            color: white;
+            padding: 7px;
+            width: -webkit-fill-available;
+            box-sizing: border-box;
+            position: fixed;
+            margin-top: -50px;
+        }
+        .dark-mode .header-container {
+            background: linear-gradient(2deg, #000000, #0205a7);
+        }
+        .logo img {
+            height: 40px;
+            padding-left: 4px;
+        }
+        
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+        .nav {
+            display: flex;
+            gap: 15px;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            transition: all 0.3s ease-in-out;
+            position: relative;
+        }
+        .nav a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+        }
+        .side {
+            position: fixed;
+            right: -300px;
+            width: 195px;
+            background: linear-gradient(135deg, #0205a7, #3054a7);
+            padding-top: 38px;
+            transition: 0.5s cubic-bezier(0, 0, 0.76, -0.13);
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 30px;
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+            z-index: 5;
+        }
+        .side.active {
+            right: 0;
+        }
+        .side a {
+            display: block;
+            color: white;
+            padding: 17px;
+            text-decoration: none;
+            text-align: left;
+            font-size: 18px;
+            transition: all 0.3s ease-in-out;
+        }
+        .side a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding-left: 25px;
+        }
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            left: 20px;
+            font-size: 24px;
+            cursor: pointer;
+            color: white;
+        }
+        .theme-toggle {
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 18px;
+        }
+    </style>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+      
+        gtag('config', 'G-EMJ8DSPWYE');
+      </script>
+      <title>Skillzify - Learn Python</title>
+      
+      <script type="module">
+          import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js";
+          import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-auth.js";
+  
+          const firebaseConfig = {
+              apiKey: "AIzaSyA3FcUoQZ811vygR9oDITUwwiCDALYJ5zE",
+              authDomain: "skillzify2024.firebaseapp.com",
+              projectId: "skillzify2024",
+              storageBucket: "skillzify2024.firebasestorage.app",
+              messagingSenderId: "502836069827",
+              appId: "1:502836069827:web:db3ff7fd2fd161c4d6a976",
+              measurementId: "G-EMJ8DSPWYE"
+          };
+          
+          const app = initializeApp(firebaseConfig);
+          const auth = getAuth(app);
+  
+          onAuthStateChanged(auth, (user) => {
+              if (user) {
+                  document.getElementById("login-link").style.display = "none";
+                  document.getElementById("register-link").style.display = "none";
+                  document.getElementById("logout-btn").style.display = "inline-block";
+              } else {
+                  document.getElementById("login-link").style.display = "inline-block";
+                  document.getElementById("register-link").style.display = "inline-block";
+                  document.getElementById("logout-btn").style.display = "none";
+              }
+          });
+  
+          onAuthStateChanged(auth, (user) => {
+              if (user) {
+                  document.getElementById("login-link2").style.display = "none";
+                  document.getElementById("register-link2").style.display = "none";
+                  document.getElementById("logout-btn2").style.display = "inline-block";
+              } else {
+                  document.getElementById("login-link2").style.display = "inline-block";
+                  document.getElementById("register-link2").style.display = "inline-block";
+                  document.getElementById("logout-btn2").style.display = "none";
+              }
+          });
+  
+          window.logout = () => {
+              signOut(auth).then(() => {
+                  window.location.reload();
+              }).catch((error) => {
+                  console.error("Logout failed", error);
+              });
+          };
+      </script>
+      
+</head>
+<body>
+    <div class="header-container" style="margin-top: 0px;">
+        <button class="menu-toggle" onclick="toggleSidebar()"><i class='bx bx-menu'></i></button>
+        
+        <div class="logo">
+            <a href="index.html"><img id="logo-img" src="../Dark No BG.png" alt="Skillzify Logo"></a>
+        </div>
+        <div class="nav">
+            <a href="../index.html"><b>Home</b></a>
+            <a href="../study_mate.html"><b>Study Materials</b></a>
+            
+            <a href="../compiler.html"><b>Python Compiler</b></a>
+            <a href="../contact.html"><b>Contact</b></a>
+            <a href="../aboutus.html"><b>About Us</b></a>
+            <a href="../login.html" id="login-link"><b>Login</b></a>
+            <a href="../register.html" id="register-link"><b>Register</b></a>
+            <button id="logout-btn" style="display:none;" onclick="logout()"><b>Logout</b></button>
+            <button class="theme-toggle" onclick="toggleTheme()"><i class='bx bx-moon'></i></button>
+        </div>
+    </div>
+    <div class="side" id="side-menu">
+        <span class="close-btn" onclick="toggleSidebar()">&times;</span>
+        <a href="../index.html"><b>Home</b></a>
+            <a href="../study_mate.html"><b>Study Materials</b></a>
+            <a href="../compiler.html"><b>Python Compiler</b></a>
+            <a href="../contact.html"><b>Contact</b></a>
+            <a href="../aboutus.html"><b>About Us</b></a>
+            <a href="../login.html" id="login-link"><b>Login</b></a>
+            <a href="../register.html" id="register-link"><b>Register</b></a>
+            <button id="logout-btn" style="display:none;" onclick="logout()"><b>Logout</b></button>
+            <button class="theme-toggle" onclick="toggleTheme()"><i class='bx bx-moon'></i></button>
+        </div>
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Python HOME</a></li>
+                    <li><a href="Features.html">Python Features</a></li>
+                    <li><a href="Buildingblocks.html">Python Building Blocks</a></li>
+                    <li><a href="setup.html">Python Environment Setup</a></li>
+                    <li><a href="program.html">Simple Python Program</a></li>
+                    <li><a href="datatypes.html">Python Data Types</a></li>
+                    <li><a href="operators.html">Operators</a></li>
+                    <li><a href="controlflow.html">Control Flow</a></li>
+                    <li><a href="conditionalstatement.html">Conditional Statements</a></li>
+                    <li><a href="loop.html">Loops</a></li>
+                    <li><a href="loopmanipulation.html">Loop Manipulation</a></li>
+                    <li><a href="list.html">List</a></li>
+                    <li><a href="tuple.html">Tuples</a></li>
+                    <li><a href="set.html">Sets</a></li>
+                    <li><a href="dictionary.html">Dictionary</a></li>
+                    <li><a href="function.html">Function</a></li>
+                    <li><a href="userdefinedfuncion.html">User Defined Function</a></li>
+                    <li><a href="modules.html">Modules</a></li>
+                    <li><a href="package.html">Python Packages</a></li>
+                    <li><a href="class.html">Classes and Objects</a></li>
+                    <li><a href="method.html">Method Overriding and Overloading</a></li>
+                    <li><a href="hiding.html">Data Hiding</a></li>
+                    <li><a href="abstraction.html">Data Abstraction</a></li>
+                    <li><a href="inheritance.html">Inheritance</a></li>
+                    <li><a href="customization.html">Customization vs Inheritance</a></li>
+                    <li><a href="io.html">  I/O Handling</a></li>
+                    <li><a href="file.html">File Handling</a></li>
+                    <li><a href="exception.html">Exception Handling</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <center><h2>Programming with Python [22616]</h2></center>
+            <div class="card">
+                <h3>Learn Python With Skillzify</h3>
+                <p>Python is a popular programming language.</p>
+                <p>Python can be used on a server to create web applications.</p><br>
+            </div>
+
+            <div class="section">
+               <center><h3><i>Unit 1 : Introduction and Syntax of Python Program</i></h3></center> 
+                         1.1 Features of Python - Interactive, Object-oriented, Interpreted, Platform independent.
+                        <br>
+                        1.2 Python building blocks - Identifiers, Keywords, Indentation, Variables, Comments.
+                        <br>
+                            1.3 Python environment setup - Installation and working of IDE
+                        <br>
+                            1.4 Running Simple Python scripts to display 'welcome' message.
+                        <br>
+                            1.5 Python Data Types: Numbers, String, Tuples, Lists, Dictionary. Declaration and use of data types.
+                       <br>
+                       <br>
+                      </div><br>
+            <div class="section">
+                <center><h3><i>Unit 2 : Python Operators and Control Flow Structures</i></h3></center> 
+                2.1 Basic Operators: Arithmetic, Comparison/Relational,
+                Assignment,Logical, Bitwise, Membership, Identity                                            
+                operators, Python Operator Precedence
+   
+                         <br>
+                         2.2 Control Flow
+                         <br>
+                         2.3 Conditional Statements (if, if ... else, nested if)
+                         <br>
+                         2.4 Looping in python (while loop, for loop,nested
+                         loops)
+           
+                         <br>
+                         2.5 loop manipulation using continue, pass, break,
+                         else.
+         
+                        <br>
+                        <br>
+                        
+             </div><br>
+             <div class="section">
+                <center><h3><i>Unit 3 : DATA STRUCTURES IN PYTHON </i></h3></center> 
+                3.1 Lists:-
+                Defining lists, accessing values in list, deleting values in list, updating lists.
+                Basic List Operations
+                Built-in List function.
+                <br>
+                3.2 Tuples:-
+                 Accessing values in Tuples, deleting values in Tuples, and updating Tuples.
+                Basic Tuple operations.
+                Built - in Tuple functions
+                <br>
+                3.3 Sets:-
+                Accessing values in Set, deleting values in Set and updating Sets.
+                Basic Set operations.
+                Built - in Set functions
+                <br>
+                3.4 Dictionaries :-
+                Accessing values in Dictionary, deleting values in Dictionary and updating Dictionary.
+                Basic Dictionary operations.
+                Built - in Dictionaries functions.   
+                <br>
+                <br>                                                                                       
+                        
+             </div><br>
+             <div class="section">
+                <center><h3><i>Unit 4 : Python Functions, Modules and Packages</i></h3></center> 
+                        4.1 Use of Python built-in functions (e.g. type / data conversion functions, math functions etc.)
+                         <br>
+                         4.2 User defined functions: Function definition, Function calling, function arguments and parameter passing, Return statement, Scope of Variables: Global variable and Local Variable.
+                         <br>
+                         4.3 Modules: Writing modules, importing modules, importing objects from modules, Python built-in modules (e.g. Numeric and mathematical module, Functional Programming Module) Namespace and Scoping.
+                         <br>
+                         4.4 Python Packages: Introduction, Writing Python packages, Using standard (e.g. math, scipy, Numpy, matplotlib, pandas etc.) and user defined packages.
+                         
+                        <br>
+                        <br>
+                        
+             </div>
+             <div class="section">
+                <center><h3><i>Unit 5 : Object Oriented Programming in Python</i></h3></center> 
+                5.1 Creating Classes and Objects
+                         <br>
+                         5.2 Method Overloading and Overriding
+                         <br>
+                         5.3 Data Hiding<br>
+5.4 Data abstraction<br>
+5.5 Inheritance and composition classes<br>
+5.6 Customization via inheritance specializing inherited method<br>
+<br>
+                        
+             </div><br>
+             <div class="section">
+                <center><h3><i>Unit 6 : File I/O Handling and Exception Handling</i></h3></center> 
+                6.1 I/O Operations: Reading keyboard input, Printing to screen<br>
+6.2 File Handling: Opening file in different modes, accessing file contents using standard library functions, Reading and writing files, closing a file, Renaming and deleting files, Directories in Python, File and directory related standard functions
+<br>
+6.3 Exception Handling: Introduction, Exception handling - 'try: except:' statement, 'raise' statement, User defined exceptions<br>
+                        <center>
+                            <br>
+                            
+                           
+             </div>
+        <div class="navigation">
+                <a href="Features.html" class="next">Next</a> 
+            </div>
+
+    </div>
+    <a href="https://whatsapp.com/channel/0029Vb0aOSuG8l5DXJAK0S3X" class="whatsapp-float" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+    
+    <div class="footer">
+        <p>&copy; 2025 Skillzify. All Rights Reserved.</p>
+    </div></main>
+    <script>
+        function toggleTheme() {
+            let darkMode = localStorage.getItem("dark-mode");
+            document.body.classList.toggle('dark-mode', darkMode !== "enabled");
+            localStorage.setItem("dark-mode", darkMode === "enabled" ? "disabled" : "enabled");
+            document.getElementById("logo-img").src = darkMode === "enabled" ? "../Dark No BG.png" : "../Light No BG.png";
+            document.getElementById("logo-img2").src = darkMode === "enabled" ? "../Dark No BG.png" : "../Light No BG.png";
+        }
+
+        function toggleSidebar() {
+            document.getElementById("sidebar-menu").classList.toggle("active");
+        }
+
+        window.onload = () => {
+            if (localStorage.getItem("dark-mode") === "enabled") {
+                document.body.classList.add("dark-mode");
+                document.getElementById("logo-img").src = "../Light No BG.png";
+                document.getElementById("logo-img2").src = "../Light No BG.png";
+
+            }
+        };
+    
+        (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="-0FMOHrX1VX3RWxWj6X94";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+    </script>
+</body>
+</html>

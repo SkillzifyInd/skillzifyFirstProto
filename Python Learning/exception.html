@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Material Interface</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <h1>Study Material</h1>
+        </div>
+    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Python HOME</a></li>
+                    <li><a href="Features.html">Python Features</a></li>
+                    <li><a href="Buildingblocks.html">Python Building Blocks</a></li>
+                    <li><a href="setup.html">Python Environment Setup</a></li>
+                    <li><a href="program.html">Simple Python Program</a></li>
+                    <li><a href="datatypes.html">Python Data Types</a></li>
+                    <li><a href="operators.html">Operators</a></li>
+                    <li><a href="controlflow.html">Control Flow</a></li>
+                    <li><a href="conditionalstatement.html">Conditional Statements</a></li>
+                    <li><a href="loop.html">Loops</a></li>
+                    <li><a href="loopmanipulation.html">Loop Manipulation</a></li>
+                    <li><a href="list.html">List</a></li>
+                    <li><a href="tuple.html">Tuples</a></li>
+                    <li><a href="set.html">Sets</a></li>
+                    <li><a href="dictionary.html">Dictionary</a></li>
+                    <li><a href="function.html">Function</a></li>
+                    <li><a href="userdefinedfuncion.html">User Defined Function</a></li>
+                    <li><a href="modules.html">Modules</a></li>
+                    <li><a href="package.html">Python Packages</a></li>
+                    <li><a href="class.html">Classes and Objects</a></li>
+                    <li><a href="method.html">Method Overriding and Overloading</a></li>
+                    <li><a href="hiding.html">Data Hiding</a></li>
+                    <li><a href="abstraction.html">Data Abstraction</a></li>
+                    <li><a href="inheritance.html">Inheritance</a></li>
+                    <li><a href="customization.html">Customization vs Inheritance</a></li>
+                    <li><a href="io.html">  I/O Handling</a></li>
+                    <li><a href="file.html">File Handling</a></li>
+                    <li><a href="exception.html" class="active">Exception Handling</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <h1>6.3 Exception Handling</h1><br>
+            <p>An exception is an event that occurs during the execution of a program that disrupts the normal flow of execution. If not handled properly, it may terminate the program.</p>
+            <br><div class="section">
+            <h2>Types of Errors</h2>
+            <ul>
+                <li><strong>Compile Time Errors:</strong> Syntax errors like missing colons or incorrect indentation.</li>
+                <li><strong>Run Time Errors:</strong> Errors that occur due to invalid input or unexpected behavior.</li>
+                <li><strong>Logical Errors:</strong> Errors due to incorrect program logic.</li>
+            </ul><br>
+            <br>
+            <p><b>Example:</b></p> <pre>
+
+print(Hello)  # Syntax Error (Missing quotes)
+
+a = 10
+if a > 5  # Syntax Error (Missing colon)
+            </pre></div>
+            <div class="section">
+
+            <h2>6.3.1 try: except Statement</h2>
+            <p>The try...except block is used to handle exceptions in Python. The code that may cause an exception is placed inside the try block, while the except block handles specific exceptions.</p>
+            <br>
+            <p><b>Syntax:</b></p>           <pre>
+
+try:
+    # Suspicious code
+except Exception1:
+    # Handle Exception1
+except Exception2:
+    # Handle Exception2
+else:
+    # Execute if no exception occurs
+
+</pre>
+<br>
+              <p><b>Example:</b></p>
+<pre>a = int(input("Enter value of a:"))
+    b = int(input("Enter value of b:"))
+    try:
+        c = a / b
+    except ValueError:
+        print("Wrong data entered")
+    except ZeroDivisionError:
+        print("Divide By Zero")
+    else:
+        print("The result is", c)</pre>
+<br></div>
+<div class="section">
+
+            
+            <h2>6.3.2 The Raise Statement</h2>
+            <p>Raising an exception is a technique for interrupting the normal flow of execution in a program, signaling that some exceptional circumstance has arisen, and returning directly to an enclosing part of the program that was designated to react to that circumstance. 
+                The Python interpreter raises an exception each time it detects an error in an expression or statement. 
+                </p>
+            <br>
+           
+              <p><b>Syntax:</b></p>    <pre>
+raise [Exception [, args [, traceback]]]</pre><br>
+<br>
+              <p><b>Example:</b></p>
+<pre>
+
+def NegativeNum(num):
+    if num < 0:
+        raise Exception("Number is negative!", num)
+            </pre>
+            </div>
+            <div class="section">
+
+            <h2>6.3.3 Standard Built-in Exceptions</h2>
+            <p>Python provides several built-in exceptions like <code>TypeError</code>, <code>ValueError</code>, <code>ZeroDivisionError</code>, etc.</p>
+            </div><br>             <div class="section">
+
+            <h2>6.3.4 User Defined Exceptions</h2>
+            <p>Python allows users to create their own exceptions by defining custom exception classes.</p>
+            <br>
+          
+            <p><b>Example:</b></p>          <pre>
+class InvalidAgeError(Exception):
+    def __init__(self, age, msg="Age must be between 0 and 120"):
+        self.age = age
+        self.msg = msg
+        super().__init__(self.msg)
+
+    def __str__(self):
+        return f'{self.age} -> {self.msg}'
+
+def set_age(age):
+    if age < 0 or age > 120:
+        raise InvalidAgeError(age)
+    else:
+        print(f"Age set to: {age}")
+
+try:
+    set_age(150)
+except InvalidAgeError as e:
+    print(e)
+            </pre>
+            </div>
+            <div class="navigation">
+                <a href="file.html" class="prev">Previous</a> 
+                
+            </div>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Operators</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <h1>Study Material</h1>
+        </div>
+    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Python HOME</a></li>
+                    <li><a href="Features.html" >Python Features</a></li>
+                    <li><a href="Buildingblocks.html">Python Building Blocks</a></li>
+                    <li><a href="setup.html">Python Environment Setup</a></li>
+                    <li><a href="program.html">Simple Python Program</a></li>
+                    <li><a href="datatypes.html">Python Data Types</a></li>
+                    <li><a href="operators.html">Operators</a></li>
+                    <li><a href="controlflow.html">Control Flow</a></li>
+                    <li><a href="conditionalstatement.html" class="active">Conditional Statements</a></li>
+                    <li><a href="loop.html">Loops</a></li>
+                    <li><a href="loopmanipulation.html">Loop Manipulation</a></li>
+                    <li><a href="list.html">List</a></li>
+                    <li><a href="tuple.html">Tuples</a></li>
+                    <li><a href="set.html">Sets</a></li>
+                    <li><a href="dictionary.html">Dictionary</a></li>
+                    <li><a href="function.html">Function</a></li>
+                    <li><a href="userdefinedfuncion.html">User Defined Function</a></li>
+                    <li><a href="modules.html">Modules</a></li>
+                    <li><a href="package.html">Python Packages</a></li>
+                    <li><a href="class.html">Classes and Objects</a></li>
+                    <li><a href="method.html">Method Overriding and Overloading</a></li>
+                    <li><a href="hiding.html">Data Hiding</a></li>
+                    <li><a href="abstraction.html">Data Abstraction</a></li>
+                    <li><a href="inheritance.html">Inheritance</a></li>
+                    <li><a href="customization.html">Customization vs Inheritance</a></li>
+                    <li><a href="io.html">  I/O Handling</a></li>
+                    <li><a href="file.html">File Handling</a></li>
+                    <li><a href="exception.html">Exception Handling</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+        
+            <h1>2.3 CONDITIONAL STATEMENTS</h1><br>
+            <div class="section"> 
+            <h2>1. IF STATEMENT</h2>
+            <p>The if statement is used to test particular condition. If the condition is true then it executes the block of statements which is called as if block</p>
+            <br>
+            <p><b>Syntax:</b></p>
+            <pre>
+if condition :
+   //statement
+</pre>
+            <br>
+            <p><b>Example:</b></p>
+            <pre>
+a = 33
+b = 200
+if b > a:
+    print("b is greater than a")
+            </pre>
+            </div>
+            <div class="section"> 
+            <h2>2. IF-ELSE STATEMENT</h2>
+            <p>The if-else statement provides an else block combined with the if statement which is executed in the false case of the condition.
+            </p>
+            <br>
+            <p><b>Syntax:</b></p>
+            <pre>
+if condition :
+   //statement1
+else :
+//statement1
+</pre>
+            <br>
+            <p><b>Example:</b></p>
+            <pre>
+n = int(input("Enter a number: "))
+if n % 2 == 0:
+    print("Even Number")
+else:
+    print("Odd Number")
+            </pre>
+            
+            
+            <pre>
+n = int(input("Enter a number: "))
+if n % 2 == 0:
+    print("Even Number")
+else:
+    print("Odd Number")
+            </pre>
+            </div>
+            <div class="section"> 
+            <h2>3. NESTED IF STATEMENT</h2>
+            <p>When one if condition is present inside another if then it is called nested if conditions. Any number of these statements can be nested inside one another.
+            </p><br>
+            <p><b>Syntax:</b></p>
+            <pre>
+if condition 1  :
+    if condition 2 :
+        //statement 1
+    if condition 3 :
+        //statement 2
+else :
+    //statement 3
+             
+</pre>
+            <br>
+            <p><b>Example:</b></p>
+            <pre>
+a = int(input("Enter value of a: "))
+b = int(input("Enter value of b: "))
+if a == b:
+    print("Both numbers are equal")
+else:
+    if a < b:
+        print("a is less than b")
+    else:
+        print("a is greater than b")
+            </pre>
+            
+            
+            </div>
+            <div class="section"> 
+            <h2>4. IF-ELIF-ELSE STATEMENT</h2>
+            <p>Sometimes there are more than two possibilities. These possibilities can be expressed using chained conditions. </p>
+            <br><p><b>Syntax:</b></p>
+            <pre>
+if(condition 1) :
+//statements
+elif(condition 2) :
+//statements
+.
+.
+.
+elif(condition n) :
+//statements
+else:
+//statements
+                </pre><br>
+                <p><b>Example:</b></p>
+            <pre>
+i = 20
+if i == 10:
+    print("i is 10")
+elif i == 20:
+    print("i is 20")
+elif i == 30:
+    print("i is 30")
+else:
+    print("i is null")
+            </pre>
+            </div>
+            <div class="navigation">
+                <a href="controlflow.html" class="prev">Previous</a> 
+                <a href="loop.html" class="next">Next</a> 
+            </div>
+        </main>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

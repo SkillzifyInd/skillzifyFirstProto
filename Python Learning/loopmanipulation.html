@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Material Interface</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <h1>Study Material</h1>
+        </div>
+    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Python HOME</a></li>
+                    <li><a href="Features.html">Python Features</a></li>
+                    <li><a href="Buildingblocks.html">Python Building Blocks</a></li>
+                    <li><a href="setup.html">Python Environment Setup</a></li>
+                    <li><a href="program.html">Simple Python Program</a></li>
+                    <li><a href="datatypes.html">Python Data Types</a></li>
+                    <li><a href="operators.html">Operators</a></li>
+                    <li><a href="controlflow.html">Control Flow</a></li>
+                    <li><a href="conditionalstatement.html">Conditional Statements</a></li>
+                    <li><a href="loop.html">Loops</a></li>
+                    <li><a href="loopmanipulation.html" class="active">Loop Manipulation</a></li>
+                    <li><a href="list.html">List</a></li>
+                    <li><a href="tuple.html">Tuples</a></li>
+                    <li><a href="set.html">Sets</a></li>
+                    <li><a href="dictionary.html">Dictionary</a></li>
+                    <li><a href="function.html">Function</a></li>
+                    <li><a href="userdefinedfuncion.html">User Defined Function</a></li>
+                    <li><a href="modules.html">Modules</a></li>
+                    <li><a href="package.html">Python Packages</a></li>
+                    <li><a href="class.html">Classes and Objects</a></li>
+                    <li><a href="method.html">Method Overriding and Overloading</a></li>
+                    <li><a href="hiding.html">Data Hiding</a></li>
+                    <li><a href="abstraction.html">Data Abstraction</a></li>
+                    <li><a href="inheritance.html">Inheritance</a></li>
+                    <li><a href="customization.html">Customization vs Inheritance</a></li>
+                    <li><a href="io.html">  I/O Handling</a></li>
+                    <li><a href="file.html">File Handling</a></li>
+                    <li><a href="exception.html">Exception Handling</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+            
+                <h1>2.5 Loop Manipulation in Python</h1><br>
+                <div class="section">
+                <h2>1. BREAK</h2>
+                <p>The <strong>break</strong> statement stops the loop when a condition is met.</p>
+                <br>
+            <p><b>Example:</b></p>
+                    <pre>
+fruits = ["apple", "banana", "cherry"]
+for x in fruits:
+    print(x)
+    if x == "banana":
+        break
+                    </pre>
+                </div>
+                
+            <div class="section">
+                <h2>2. CONTINUE</h2>
+                <p>The <strong>continue</strong> statement skips an iteration when a condition is met.</p>
+                <br>
+            <p><b>Example:</b></p>
+                    <pre>
+fruits = ["apple", "banana", "cherry"]
+for x in fruits:
+    if x == "banana":
+        continue
+    print(x)
+                    </pre>
+                </div>
+               
+            <div class="section">
+                <h2>3. PASS</h2>
+                <p>The <strong>pass</strong> statement is used when a statement is syntactically required but you do not want to execute any command.</p>
+                <br>
+            <p><b>Example:</b></p>
+                    <pre>
+for i in range(1, 5):
+    if i == 3:
+        pass
+    print("The current number is", i)
+                    </pre>
+                </div>
+                
+                <div class="section">
+                <h2>4. ELSE</h2>
+                <h3>i) Else with For Loop</h3>
+                <p>The <strong>else</strong> block executes when the loop finishes normally.</p>
+                <br>
+            <p><b>Example:</b></p>
+                    <pre>
+for x in range(3):
+    print(x)
+else:
+    print("Loop ended normally")
+                    </pre>
+                
+          
+            <br>
+                <h3>ii) Else with While Loop</h3>
+                <p>The <strong>else</strong> block executes when a while loop ends.</p>
+               
+                    <pre>
+i = 1
+while i < 6:
+    print(i)
+    i += 1
+else:
+    print("i is no longer less than 6")
+                    </pre>
+          
+                </div>
+            
+            <div class="navigation">
+                <a href="loop.html" class="prev">Previous</a> 
+                <a href="list.html" class="next">Next</a> 
+            </div>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Classes and Objects</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <h1>Study Material</h1>
+        </div>
+    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Python HOME</a></li>
+                    <li><a href="Features.html">Python Features</a></li>
+                    <li><a href="Buildingblocks.html">Python Building Blocks</a></li>
+                    <li><a href="setup.html">Python Environment Setup</a></li>
+                    <li><a href="program.html">Simple Python Program</a></li>
+                    <li><a href="datatypes.html">Python Data Types</a></li>
+                    <li><a href="operators.html">Operators</a></li>
+                    <li><a href="controlflow.html">Control Flow</a></li>
+                    <li><a href="conditionalstatement.html">Conditional Statements</a></li>
+                    <li><a href="loop.html">Loops</a></li>
+                    <li><a href="loopmanipulation.html">Loop Manipulation</a></li>
+                    <li><a href="list.html">List</a></li>
+                    <li><a href="tuple.html">Tuples</a></li>
+                    <li><a href="set.html">Sets</a></li>
+                    <li><a href="dictionary.html">Dictionary</a></li>
+                    <li><a href="function.html">Function</a></li>
+                    <li><a href="userdefinedfuncion.html">User Defined Function</a></li>
+                    <li><a href="modules.html">Modules</a></li>
+                    <li><a href="package.html">Python Packages</a></li>
+                    <li><a href="class.html" class="active">Classes and Objects</a></li>
+                    <li><a href="method.html">Method Overriding and Overloading</a></li>
+                    <li><a href="hiding.html">Data Hiding</a></li>
+                    <li><a href="abstraction.html">Data Abstraction</a></li>
+                    <li><a href="inheritance.html">Inheritance</a></li>
+                    <li><a href="customization.html">Customization vs Inheritance</a></li>
+                    <li><a href="io.html">  I/O Handling</a></li>
+                    <li><a href="file.html">File Handling</a></li>
+                    <li><a href="exception.html">Exception Handling</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <h1>5.1 Python Classes and Objects</h1>
+            <br>
+            <div class="section">
+                <h2>Classes</h2>
+                <p>Class is a basic entity in object oriented programming.
+                    In any object oriented programming, the class is declared using keyword “class”. 
+                    Every class consist of data members and methods.
+                    </p><br><p><b>Example:</b></p> 
+                <pre>
+class Student:
+    roll_no = 33
+    name = "Tanvi"
+obj = Student()
+print("Roll no ", obj.roll_no)
+print("Name is ", obj.name)
+                </pre>
+            </div>
+            
+            <div class="section">
+                <h2>Objects</h2>
+                <p>An object is an instance of a class that has some attributes and behavior. 
+                    Objects are runtime entities of the object oriented programs.
+                </p><br><p><b>Example:</b></p> 
+                <pre>
+class Student:
+    roll_no = 33
+    name = "Tanvi"
+obj = Student()
+print("Roll no ", obj.roll_no)
+print("Name is ", obj.name)
+                </pre>
+            </div>
+            <div class="section">
+                <h2>How To Create a Class and Object ?</h2>
+                <p>The keyword ‘ class ‘ is used to define the class followed by the class name . Objects can be used to access the attributes of the class. </p>
+                <br> <p><b>Syntax of Class:</b></p>
+            <pre>
+Class class_name :
+Statement1
+Statement2
+ ….
+Statementn
+                    </pre>
+                   <br>  <p><b>Syntax of Object:</b></p>
+                    <pre>
+Object_name=class_name()
+
+                            </pre>
+                            <br><p><b>Example:</b></p> 
+                            <pre>
+class Student :
+    roll_no=33
+    name="Tanvi"
+obj=Student()
+print("Roll no ",obj.roll_no)
+print("Name is ",obj.name)
+                            </pre>
+
+            </div>
+            <div class="section">
+                <h2>Class Methods and Self Object</h2>
+                <p>The class methods are the function define inside the class.
+                    They are actually the normal functions but belong to the class.
+                    The class method defines the first argument as self.
+                    The self methods are accessible from outside the class using object. Hence these methods are called as instance methods.</p>
+                    <br><p><b>Example:</b></p> <pre>
+class Student:
+    roll_no = 33
+    name = 'Tanvi'
+    def show(self):
+        print("Inside the Student Class")
+obj = Student()
+print("Roll Number: ", obj.roll_no)
+print("Name: ", obj.name)
+obj.show()
+                </pre>
+            </div>
+            
+            <div class="section">
+                <h2>Public and Private Members</h2>
+                <h3>Public Variables</h3>
+                <p>Public variables are those variables that are defined in the class and can be accessed from within the class and from outside the class.</p>
+                <br><p><b>Example:</b></p> <pre>
+class Student:
+    def __init__(self, R, N):
+        self.Roll = R
+        self.Name = N
+obj = Student(33, "Tanvi")
+print("Roll No: ", obj.Roll)
+print("Name: ", obj.Name)
+                </pre>
+                <br>
+                <h3>Private Variables</h3>
+                <p>Private variables are those variables that are defined in the class but can be accessible by the methods of that class only.</p>
+
+                <br><p><b>Example:</b></p> 
+                <pre>
+class Student:
+    def __init__(self, R, N):
+        self.__Roll = R
+        self.__Name = N
+    def get_details(self):
+        print("Roll No:", self.__Roll)
+        print("Name:", self.__Name)
+obj = Student(33, "Tanvi")
+obj.get_details()
+                </pre>
+            </div>
+            
+            <div class="navigation">
+                <a href="package.html" class="prev">Previous</a> 
+                <a href="method.html" class="next">Next</a> 
+            </div>
+        </main>
+    </div>
+</body>
+</html>

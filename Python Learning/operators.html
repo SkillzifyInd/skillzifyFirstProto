@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Operators</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <h1>Study Material</h1>
+        </div>
+    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Python HOME</a></li>
+                    <li><a href="Features.html">Python Features</a></li>
+                    <li><a href="Buildingblocks.html">Python Building Blocks</a></li>
+                    <li><a href="setup.html">Python Environment Setup</a></li>
+                    <li><a href="program.html">Simple Python Program</a></li>
+                    <li><a href="datatypes.html">Python Data Types</a></li>
+                    <li><a href="operators.html" class="active">Operators</a></li>
+                    <li><a href="controlflow.html">Control Flow</a></li>
+                    <li><a href="conditionalstatement.html">Conditional Statements</a></li>
+                    <li><a href="loop.html">Loops</a></li>
+                    <li><a href="loopmanipulation.html">Loop Manipulation</a></li>
+                    <li><a href="list.html">List</a></li>
+                    <li><a href="tuple.html">Tuples</a></li>
+                    <li><a href="set.html">Sets</a></li>
+                    <li><a href="dictionary.html">Dictionary</a></li>
+                    <li><a href="function.html">Function</a></li>
+                    <li><a href="userdefinedfuncion.html">User Defined Function</a></li>
+                    <li><a href="modules.html">Modules</a></li>
+                    <li><a href="package.html">Python Packages</a></li>
+                    <li><a href="class.html">Classes and Objects</a></li>
+                    <li><a href="method.html">Method Overriding and Overloading</a></li>
+                    <li><a href="hiding.html">Data Hiding</a></li>
+                    <li><a href="abstraction.html">Data Abstraction</a></li>
+                    <li><a href="inheritance.html">Inheritance</a></li>
+                    <li><a href="customization.html">Customization vs Inheritance</a></li>
+                    <li><a href="io.html">  I/O Handling</a></li>
+                    <li><a href="file.html">File Handling</a></li>
+                    <li><a href="exception.html">Exception Handling</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <h1>2.1 Python Operators</h1>
+            <br>
+            <p>Operators are special symbols used for computations. The values that operators use for performing computation are called operands.</p>
+            <br>
+            <h2>Types of Operators</h2>
+            <ul>
+                <li>Arithmetic Operators</li>
+                <li>Comparison Operators</li>
+                <li>Assignment Operators</li>
+                <li>Logical Operators</li>
+                <li>Bitwise Operators</li>
+                <li>Membership Operators</li>
+                <li>Identity Operators</li><br>
+            </ul>
+            <div class="section">
+            <h2>1. Arithmetic Operators</h2>
+            <p>These operators perform arithmetic operations like addition, subtraction, multiplication, etc.</p>
+            <br><p><b>Example:</b></p><pre>
+print(100 + 20)
+print(100 - 20)
+print(10 * 10)
+print(10 / 2)
+print(10 % 2)
+print(2 ** 3)
+print(10 // 3)
+            </pre>
+            </div><div class="section">
+            <h2>2. Comparison Operators</h2>
+            <p>These operators compare values and establish relationships among them.</p>
+            <br><p><b>Example:</b></p><pre>
+x = 5
+y = 3
+print(x == y)
+print(x != y)
+print(x > y)
+print(x < y)
+print(x >= y)
+print(x <= y)
+            </pre>
+        </div>
+        <div class="section">            <h2>3. Assignment Operators</h2>
+            <p>Assignment operators assign values to variables.</p>
+            <br><p><b>Example:</b></p> <pre>
+x = 5
+print(x)
+x += 3
+print(x)
+            </pre>
+</div>
+<div class="section">
+            <h2>4. Logical Operators</h2>
+            <p>Logical operators are used to combine conditional statements.</p>
+            <br><p><b>Example:</b></p>    <pre>
+x = 5
+print(x > 3 and x < 10)
+print(x > 3 or x < 10)
+print(not(x > 3 and x < 10))
+            </pre>
+</div>
+<div class="section">
+            <h2>5. Bitwise Operators</h2>
+            <p>These operators work on bits and perform bitwise operations.</p>
+            <br><p><b>Example:</b></p>  <pre>
+print(6 & 3)
+print(6 | 3)
+print(6 ^ 3)
+print(6 << 3)
+print(6 >> 3)
+            </pre>
+</div>
+<div class="section">
+            <h2>6. Membership Operators</h2>
+            <p>Check if a value is part of a sequence like a list or string.</p>
+            <br><p><b>Example:</b></p> <pre>
+x = ["apple", "banana"]
+print("banana" in x)
+print("pineapple" not in x)
+            </pre>
+</div>
+<div class="section">
+            <h2>7. Identity Operators</h2>
+            <p>Identity operators check if two variables refer to the same object.</p>
+            <br><p><b>Example:</b></p>  <pre>
+x = ["apple", "banana"]
+y = ["apple", "banana"]
+z = x
+print(x is z)
+print(x is y)
+print(x is not y)
+            </pre>
+            </div>
+            <div class="section">
+            <h2>Python Operator Precedence</h2>
+            <p>The order of evaluation depends on the rules of precedence.</p>
+            <br><p><b>Example:</b></p>   <pre>
+print((6 + 3) - (6 + 3))
+            </pre></div>
+            <div class="navigation">
+                <a href="datatypes.html" class="prev">Previous</a> 
+                <a href="controlflow.html" class="next">Next</a> 
+            </div>
+        </main>
+    </div>
+</body>
+</html>

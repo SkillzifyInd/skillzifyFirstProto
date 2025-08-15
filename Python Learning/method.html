@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Operators</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <h1>Study Material</h1>
+        </div>
+    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Python HOME</a></li>
+                    <li><a href="Features.html">Python Features</a></li>
+                    <li><a href="Buildingblocks.html">Python Building Blocks</a></li>
+                    <li><a href="setup.html">Python Environment Setup</a></li>
+                    <li><a href="program.html">Simple Python Program</a></li>
+                    <li><a href="datatypes.html">Python Data Types</a></li>
+                    <li><a href="operators.html">Operators</a></li>
+                    <li><a href="controlflow.html">Control Flow</a></li>
+                    <li><a href="conditionalstatement.html">Conditional Statements</a></li>
+                    <li><a href="loop.html">Loops</a></li>
+                    <li><a href="loopmanipulation.html">Loop Manipulation</a></li>
+                    <li><a href="list.html">List</a></li>
+                    <li><a href="tuple.html">Tuples</a></li>
+                    <li><a href="set.html">Sets</a></li>
+                    <li><a href="dictionary.html">Dictionary</a></li>
+                    <li><a href="function.html">Function</a></li>
+                    <li><a href="userdefinedfuncion.html">User Defined Function</a></li>
+                    <li><a href="modules.html">Modules</a></li>
+                    <li><a href="package.html">Python Packages</a></li>
+                    <li><a href="class.html">Classes and Objects</a></li>
+                    <li><a href="method.html" class="active">Method Overriding and Overloading</a></li>
+                    <li><a href="hiding.html">Data Hiding</a></li>
+                    <li><a href="abstraction.html">Data Abstraction</a></li>
+                    <li><a href="inheritance.html">Inheritance</a></li>
+                    <li><a href="customization.html">Customization vs Inheritance</a></li>
+                    <li><a href="io.html">  I/O Handling</a></li>
+                    <li><a href="file.html">File Handling</a></li>
+                    <li><a href="exception.html">Exception Handling</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <h1>5.2 Method Overloading and Overriding</h1>
+            <br>
+            <div class="section">
+                <h2>5.2.1 Method Overloading</h2>
+                <p>Method overloading is an ability of a function to behave differently based on the number of parameters passed to it. In method overloading, the same function name is used for different behaviors.</p>
+                <br><p><b>Example:</b></p><pre>
+def area(length, breadth):
+    cal = length * breadth
+    print(cal)
+
+def area(size):
+    cal = size * size
+    print(cal)
+
+area(3)
+area(4, 5)
+                </pre>
+            </div>
+            
+            <div class="section">
+                <h2>5.2.2 Method Overriding</h2>
+                <p>Method overriding is a mechanism in object-oriented programming that allows a child class to change the implementation of a function defined in its parent class.</p>
+                <br><h3>Criteria for Method Overriding:</h3>
+                <ul>
+                    <li>There must be inheritance between the classes.</li>
+                    <li>The function redefined in the child class must have the same number of arguments as in the parent class.</li>
+                </ul>
+                <br><p><b>Example:</b></p><pre>
+class A:
+    # Parent class
+    "Parent Class"
+    def display(self):
+        print('This is base class.')
+
+class B(A):
+    # Derived class
+    "Child/Derived class"
+    def display(self):
+        print('This is derived class.')
+
+obj = B() # Instance
+obj.display() # Calls child class method
+                </pre>
+            </div>
+            
+            <div class="navigation">
+                <a href="class.html" class="prev">Previous</a> 
+                <a href="hiding.html" class="next">Next</a> 
+            </div>
+        </main>
+    </div>
+</body>
+</html>

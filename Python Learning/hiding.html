@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Operators</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <h1>Study Material</h1>
+        </div>
+    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Python HOME</a></li>
+                    <li><a href="Features.html">Python Features</a></li>
+                    <li><a href="Buildingblocks.html">Python Building Blocks</a></li>
+                    <li><a href="setup.html">Python Environment Setup</a></li>
+                    <li><a href="program.html">Simple Python Program</a></li>
+                    <li><a href="datatypes.html">Python Data Types</a></li>
+                    <li><a href="operators.html">Operators</a></li>
+                    <li><a href="controlflow.html">Control Flow</a></li>
+                    <li><a href="conditionalstatement.html">Conditional Statements</a></li>
+                    <li><a href="loop.html">Loops</a></li>
+                    <li><a href="loopmanipulation.html">Loop Manipulation</a></li>
+                    <li><a href="list.html">List</a></li>
+                    <li><a href="tuple.html">Tuples</a></li>
+                    <li><a href="set.html">Sets</a></li>
+                    <li><a href="dictionary.html">Dictionary</a></li>
+                    <li><a href="function.html">Function</a></li>
+                    <li><a href="userdefinedfuncion.html">User Defined Function</a></li>
+                    <li><a href="modules.html">Modules</a></li>
+                    <li><a href="package.html">Python Packages</a></li>
+                    <li><a href="class.html">Classes and Objects</a></li>
+                    <li><a href="method.html">Method Overriding and Overloading</a></li>
+                    <li><a href="hiding.html" class="active">Data Hiding</a></li>
+                    <li><a href="abstraction.html">Data Abstraction</a></li>
+                    <li><a href="inheritance.html">Inheritance</a></li>
+                    <li><a href="customization.html">Customization vs Inheritance</a></li>
+                    <li><a href="io.html">  I/O Handling</a></li>
+                    <li><a href="file.html">File Handling</a></li>
+                    <li><a href="exception.html">Exception Handling</a></li>
+
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <h1>5.3 Data Hiding</h1>
+            <br>
+            <div class="section">
+<p>Data Hiding is a mechanism which does not allow to access attributes outside the class.
+    Data Hiding is an important property of object oriented   
+    Programming.
+    </p><p>we need to name attribute with double underscore(__) prefix and those attribute then are not be directly visible to outsiders.
+
+        Any variable prefix with double underscore is called as private variable which is accessible only with the class where it is declared.</p>                       <br><p><b>Example:</b></p>     <pre>
+class Counter:
+    _secretCount = 0  # Private variable
+    def count(self):  # Public method
+        self.__secretCount += 1
+        print("count=", self.__secretCount)  # Accessible inside the class
+
+c1 = Counter()
+c1.count()  # Invoke method
+c1.count()
+try:
+    print("Total count=", c1.__secretCount)  # Cannot access private variable directly
+except AttributeError as e:
+    print(f"AttributeError: {e}")
+                </pre>
+            </div>
+            
+            <div class="navigation">
+                <a href="method.html" class="prev">Previous</a> 
+                <a href="abstraction.html" class="next">Next</a> 
+            </div>
+        </main>
+    </div>
+</body>
+</html>
